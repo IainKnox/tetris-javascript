@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
             blox[currentPosition + index].classList.add('tetromino')
         });
     }
-    draw(); //testing to see if a random tetromino appears on the grid
+   // draw(); //testing to see if a random tetromino appears on the grid
 
     //remove the tetromino from the grid with an undraw function
     function undraw() {
@@ -68,14 +68,15 @@ document.addEventListener('DOMContentLoaded', function () {
             blox[currentPosition + index].classList.remove('tetromino')
         });
     }        
-    
+    //add interval to move the tetromino down the grid
+    timerId = setInterval(moveDown,300);
+
     //create a function to move the tetrominoes down the grid
     function moveDown() {
         undraw();
-        currentPosition +=width;
+        currentPosition += width;
         draw();
     }
-    
 
 
 

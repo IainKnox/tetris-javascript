@@ -74,9 +74,11 @@
     border: 1px solid salmon;
 
 }
+
 /* base color for tetromino to diplay within the grid */
 .tetromino {
     background-color: violet;
+    
 }
 
 
