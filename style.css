@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Rammetto+One&display=swap');
+
 * {
     scroll-behavior: smooth;
     box-sizing: border-box;
@@ -14,29 +16,47 @@
 }
 
 .navbar {
-    display: flex;   
+    display: flex;
+    text-align: center; 
 }
 
 
 .navbar li {
+    font-family: 'Assistant', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
     list-style: none;
     display: block;
     padding: 1rem;
-    text-decoration: none;
-    text-align: center;
     color: seashell;
 }
 
 .title {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Rammetto One', Times, serif;
     margin: 20px auto;
     text-align: center;
+}
+
+.title h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.title h2::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 10rem;
+    margin: .25em auto;
+    background-color: blueviolet;
+    box-shadow: 0px 2px 8px 0px red;
 }
 .score {
     text-align: center;
     text-transform: uppercase;
 }
 
+/* the grid created as the play area for housing the tetrominos */
 .grid {
     width: 200px;
     height: 400px;
@@ -54,6 +74,11 @@
     border: 1px solid salmon;
 
 }
+/* base color for tetromino to diplay within the grid */
+.tetromino {
+    background-color: violet;
+}
+
 
 /* footer section */
 footer {
