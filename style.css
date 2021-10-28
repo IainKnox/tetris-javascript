@@ -1,7 +1,70 @@
-body {
-    margin: 0;
-    padding: 0;
+* {
     scroll-behavior: smooth;
     box-sizing: border-box;
-    background-color: blue;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+/*  navigation elements for Users to access instructions, rules and scores */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: salmon;
+}
+
+.navbar {
+    display: flex;   
+}
+
+
+.navbar li {
+    list-style: none;
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    text-align: center;
+    color: seashell;
+}
+
+.title {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px auto;
+    text-align: center;
+}
+.score {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.grid {
+    width: 200px;
+    height: 400px;
+    border-radius: 5px;
+    background-color: blueviolet;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1.5rem auto;
+}
+
+.grid div{
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    border: 1px solid salmon;
+
+}
+
+/* footer section */
+footer {
+    min-height: 8rem;
+
+}
+
+footer p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .8rem;
+    padding: .25rem;
+    text-align: center;
+
 }

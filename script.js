@@ -1,4 +1,4 @@
 document.addEventListener('DOMContentLoaded', function(){
-    alert('All Connected!');
+    console.log('All Connected!');
 
 })
