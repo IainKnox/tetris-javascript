@@ -60,8 +60,9 @@ document.addEventListener('DOMContentLoaded', function () {
             blox[currentPosition + index].classList.add('tetromino')
         });
     }
+    draw(); //testing to see if a random tetromino appears on the grid
 
-    //remove the tetromino from the grid with an undraw fucntion
+    //remove the tetromino from the grid with an undraw function
     function undraw() {
         current.forEach( index => {
             blox[currentPosition + index].classList.remove('tetromino')
@@ -74,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
         currentPosition +=width;
         draw();
     }
+    
 
 
 
