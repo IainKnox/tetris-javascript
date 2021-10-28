@@ -1,108 +1,140 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+Tetris Javascript
+In this project I have created a new website to demostrate my understanding of the concepts of javascript with a Tetris game. 
 
-Welcome Iain Knox,
+I approached this project with mobile first design principles to create a responsive webpage that is intended to look good and and perform well on any size of device. I have also put good user experience at the front and center of all designs and have strived to create an intuitive, informative and enjoyable journey for my users.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+User Stories
+I identified 2 groups of user for this site, firstly, users that are new to tetris and looking for fun and colourful experience. Secondly, experienced tertris players who are looking for a game that increases in difficulty over time testing their skill.
+New Users
+Should be able to quickly gain an overview of what the game is about via the landing page.
+Should be able to see how to play the game via the how to tetris page.
+Should be able to clearly understand the rules of the game via the rules page.
+Should be able to gain higher levels of experience as the game progresses.
+Should be able to get clear information of which tetrominoes are dropping next through the preview grid.
+Should be able to identify which keys are pressed and interact with the controls on the page.
+Existing Users
+Should be able to do all the above.
+Should be able to gain an high score and post that to the high scores page.
+Should be able to experience a sense of nostaligia through classic tetris elements.
+From the above information I was able to determine what would be of considerable value when visiting the site and from that developed the following scope and goals:
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+<!-- still to add -->
 
-## Gitpod Reminders
+Features
+Landing Page
+Navigation Bar
+Game Grid
+Controls
+Mini Grid
+ 
+<!-- 
+One of the key factors with the site is responsive design, and with the navbar this is carried through in the way in which it behaves on smaller screens, with it taking up 100% width and stacking for easier readability and an improved user experience that doesn't detract the focus away from the site. -->
+ 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Footer
+The footer container social media links that open a new browser window to various tetris resources and groups such as wikipedia pages. There is also a floating "up" arrow to take users back to the top of the page without having to scroll up manually. The arrow was designed to incorporate the Tetris logo so as to help reinforce brand awareness with the user as they navigate through the site, on a more subconscious level.
+ 
 
-`python3 -m http.server`
+Future Updates
+A demo screen that automatically loops through to offer a visual demonstration of how to play the game. On starting the game, the grid is cleared and the player can begin.
+A difficulty setting, so as to start from a more advanced state of the game, rather than having to iterate through beginner stages.
+ 
 
-A blue button should appear to click: _Make Public_,
+Testing 1.0
+Throughout this project I have done regular testing. And have reloaded and refreshed the pages multiple times after each addition and modification. Various bugs were found in terms of images not diplaying correctly, positioning, buttons and links not working. Mostly through revision of the HTML and CSS course work and some external googling I was able to squash most bugs I encountered.
 
-Another blue button should appear to click: _Open Browser_.
+My first round of testing was functionality testing in which I performed the following actions.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Testing the Links
+Checking the External Links such as Wikipedia, Home of the Underdogs and GOG
+Checking the External Links all Open in the new Tab
+Testing Internal Links to How to Tetris, Rules and High Scores, as well as the sub links such as #top
+Testing the keyCodes
+Testing the Start/Pause Button
+Testing the Play/Mute Button
+Validator Testing
+Validating the HTML used in the site
+Validating the CSS used in the site
+Validating the JS used in the site
 
-A blue button should appear to click: _Make Public_,
+Validation results - W3C Validator
+All pages where tested through the W3C html validator and passed. Links to the results for each page are as follows;
+index.html Validation
+instructions.html Validation
+rules.html Validation
+scores.html Validation
+Validating the CSS in the site
 
-Another blue button should appear to click: _Open Browser_.
+Validation results - CSS Validator
+All pages where tested through the W3C css validator and passed. Links to the results for each page are as follows;
+tetris-javascript Validation
+Site fluidity
+To test the flow of the site I forwarded it on to my spouse and work colleagues. Grammarly was also used to test the various pages for any spelling and grammar errors.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Browser Compatibility
+I tested the compatibility of my site first by by emulating different devices using the Dev tools in Chrome as well as using the variable responsive setting to check at different breakpoints.
 
-To log into the Heroku toolbelt CLI:
+The various tests that were run were:
+checking to see if the all images and cards scaled and maintained aspect ratio as the display shrunk and grew.
+checking to see if responsive elements within my layout changed at the correct breakpoints, such as the navbar and cards.
+checking to see if my media queries behaved as expected with regards to cards displaying in columns or rows, navigation.
+I then tested it on different browsers. I have tested in Chrome, Firefox and Edge. Once I was sure my project worked on windows 10, I then opened it on my phone running Safari on IOS 15.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Testing 2.0
+My second round of testing involved accessibility and readability, checking the live site against various industry standards such as Eightshapes and Webaim to ensure a well thought out UX and UI.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+Contrast Checker
+The first port of call with regards to contrast was Eightshapes Contrast Grid so as to best understand the contrast between all the elements of the site, ensure fonts were readable against backgrounds and that font sizing was consistent to maintain accessibility.
+The resulting output was the following Eightshapes - Yoga Republic
+The site was tested using A11y colour contrast accessibility checker Contrast Checker to ensure maximum readability and accesibility.
+A11y - 
+The site was tested using WAVE, web accessibility evaluation tool Webaim to ensure accessibility criterea were met.
+Lighthouse Scores
+The site was tested for both mobile and desktop scores via Google Lighthouse with multiple tests being conducted.
+index.html Lighthouse
+instructions.html Lighthouse
+rules.html Lighthouse
+scores.html Lighthouse
+For the most part pages consistently scored 0 for accessibility and SEO and 0 for performance and best practices.
+AmIResponsive
+The site was tested with the amireponsive tool to determine how well it would look on various outputs. AmIReponsive
+ 
 
-------
+Deployment
+I have hosted my site on github pages, it can be accessed from the following url:
+<!-- need to add more information to this area and explain the proccess in more detail -->
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+ 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+Credits
+A big shout out to my mentor, Cans for guding me through the process and offering assistance when neccesary to point me in the right direction.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+The community on Slack, the help and feedback a student is able to receive from the peers and alumni is a really invaluable tool to have.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+ 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+Content
+Much of the information regarding Tetris, its styles and origins where taken from various wikipedia articles, old gaming sites
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+The color was inspired by the old school bright neon colours and running various searches through google with the keyword Tetris and then further refined with the help of sites such as Color Space and Coolors
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+The fonts were acquired via Google Fonts
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+ 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+Media
+The images used throughout the site were sourced from an open source gallery in Pexels. 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+Icons used throughout the site for social media and card graphics were sourced from the free kit made available on Font Awesome
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+ 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+Other Resources
+To better add to my understanding, markdown syntax was reseached from Markdown Syntax to aid in compiling and styiling this README document :)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+While most programming happened at unsocialable hours, when I really got stuck the web is an invaluable resource too, I did a fair amount of review on W3 Schools, MDN Mozilla. As I often felt like I was traversing an alien world, I got my hands on reference books such as Javascript and JQuery: Interactive Front-End Web Development by Jon Duckett, Javascript: The Good Parts by Douglas Crockford and Eloquent Javascript, 3rd Edition by Marijn Haverbeke. 
 
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+ 
