@@ -46,6 +46,35 @@ document.addEventListener('DOMContentLoaded', function () {
     const theTetrominoes = [lTetromino, zTetromino, tTetromino, bTetromino, iTetromino];
     console.log(theTetrominoes[0][3]);
 
+    //create an start position and rotation for the tetromino
+    let currentPosition = 4;
+    let currentRotation = 0;
+
+    //create a random tetromino and its rotation
+    let random = Math.floor(Math.random() * theTetrominoes.length);
+    let current = theTetrominoes[random][currentRotation];
+
+    //add the tetromino to the grid with a draw function
+    function draw() {
+        current.forEach( index => {
+            blox[currentPosition + index].classList.add('tetromino')
+        });
+    }
+
+    //remove the tetromino from the grid with an undraw fucntion
+    function undraw() {
+        current.forEach( index => {
+            blox[currentPosition + index].classList.remove('tetromino')
+        });
+    }        
+    
+    //create a function to move the tetrominoes down the grid
+    function moveDown() {
+        undraw();
+        currentPosition +=width;
+        draw();
+    }
+
 
 
 
