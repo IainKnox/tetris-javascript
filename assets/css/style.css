@@ -65,14 +65,12 @@
     display: flex;
     flex-wrap: wrap;
     margin: 1.5rem auto;
-}
+    }
 
-.grid div{
+
+    .grid div {
     width: 20px;
-    height: 20px;
-    border-radius: 2px;
-    border: 1px solid salmon;
-
+    height: 20px;   
 }
 
 /* base color for tetromino to diplay within the grid */
