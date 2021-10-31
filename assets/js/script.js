@@ -82,28 +82,30 @@ document.addEventListener('DOMContentLoaded', () => {
         draw();
         freeze();
     }
-    //create a function that freezes the tetromino when it hits the bottom of the div
-    // function freeze() {
-    //     if(current.some(index => blox[currentPosition + index + width].classList.contains('taken'))) {
-    //         current.forEach(index => blox[currentPosition + index].classList.add('taken')); 
-    //         //a new tetromino must now be introduced to the grid
-    //         random = Math.floor(Math.random() * theTetrominoes.lenght);
-    //         current = theTetrominoes[random][currentRotation];
-    //         currentPosition = 4;
-    //         draw();
-    //     }
-    // }
 
+    //create a function that freezes the tetromino when it hits the bottom of the div
     function freeze() {
         if(current.some(index => blox[currentPosition + index + width].classList.contains('taken'))) {
-          current.forEach(index => blox[currentPosition + index].classList.add('taken'));
-          //start a new tetromino falling
+
+          current.forEach(index => blox[currentPosition + index].classList.add('taken')); 
+          //a new tetromino must now be introduced to the grid
           random = Math.floor(Math.random() * theTetrominoes.length);
           current = theTetrominoes[random][currentRotation];
           currentPosition = 4;
           draw();
         }
     }
+
+    // function freeze() {
+    //     if(current.some(index => blox[currentPosition + index + width].classList.contains('taken'))) {
+    //       current.forEach(index => blox[currentPosition + index].classList.add('taken'));
+    //       //start a new tetromino falling
+    //       random = Math.floor(Math.random() * theTetrominoes.length);
+    //       current = theTetrominoes[random][currentRotation];
+    //       currentPosition = 3;
+    //       draw();
+    //     }
+    // }
 
 
 });
