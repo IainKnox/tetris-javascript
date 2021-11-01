@@ -116,12 +116,14 @@ document.addEventListener('DOMContentLoaded', () => {
             moveRight();
         } else if (event.keyCode === 40) {
             moveDown();
+        } else if (event.keyCode === 38) {
+            turnShape();
         }
     }
     //create an event listener to listen for keypresses and invoke the control fucntions
     document.addEventListener('keydown', control);
 
-    //create a function to move the teromino to the right until it reaches the edge of the grid
+    //create a function to move the tetromino to the right until it reaches the edge of the grid
     function moveRight() {
         undraw();
         const rightEdge = current.some(index => (currentPosition + index) % width === width - 1); //check to make sure the tetromino does not exceed the right edge
@@ -130,6 +132,17 @@ document.addEventListener('DOMContentLoaded', () => {
             currentPosition -= 1;
         }
         draw();
+    }
+
+    //create a function to turn the tetromino around so as to get it to fill gaps and complete lines
+    function turnShape() {
+        undraw(); //undraw the current rotation
+        currentRotation++; //increment the rotation by one
+        if (currentRotation === current.length) {
+            currentRotation = 0; //set new rotation 
+        }
+        current = theTetrominoes[random][currentRotation];
+        draw(); //draw the new rotation 
     }
 
 
