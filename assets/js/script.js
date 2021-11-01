@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }        
     //add interval to move the tetromino down the grid
-    timerId = setInterval(moveDown,300);
+    timerId = setInterval(moveDown, 1000);
 
     //create a function to move the tetrominoes down the grid
     function moveDown() {
@@ -88,24 +88,46 @@ document.addEventListener('DOMContentLoaded', () => {
         if(current.some(index => blox[currentPosition + index + width].classList.contains('taken'))) {
 
           current.forEach(index => blox[currentPosition + index].classList.add('taken')); 
-          //a new tetromino must now be introduced to the grid
+          //introduce a new tetromino to the grid
           random = Math.floor(Math.random() * theTetrominoes.length);
           current = theTetrominoes[random][currentRotation];
-          currentPosition = 4;
+          currentPosition = 3;
           draw();
         }
     }
 
-    // function freeze() {
-    //     if(current.some(index => blox[currentPosition + index + width].classList.contains('taken'))) {
-    //       current.forEach(index => blox[currentPosition + index].classList.add('taken'));
-    //       //start a new tetromino falling
-    //       random = Math.floor(Math.random() * theTetrominoes.length);
-    //       current = theTetrominoes[random][currentRotation];
-    //       currentPosition = 3;
-    //       draw();
-    //     }
-    // }
+    //create a function to move the teromino to the left until it reaches the edge of the grid
+    function moveLeft() {
+        undraw();
+        const leftEdge = current.some(index => (currentPosition + index) % width === 0); //check to make sure the tetromino does not exceed the left edge
+        if (!leftEdge) currentPosition -=1;
+        if (current.some(index => blox[currentPosition + index].classList.contains('taken'))) {
+            currentPosition +=1;
+        }
+        draw();
+    }
+
+    //create a function to bind directional movement to the arrow keys on the keyboard
+    function control(event) {
+        if(event.keyCode === 37) {
+            moveLeft();
+        } else if(event.keyCode === 39) {
+            moveRight();
+        }
+    }
+    //create an event listener to listen for keypresses and invoke the control fucntions
+    document.addEventListener('keydown', control);
+
+    //create a function to move the teromino to the right until it reaches the edge of the grid
+    function moveRight() {
+        undraw();
+        const rightEdge = current.some(index => (currentPosition + index) % width === width -1); //check to make sure the tetromino does not exceed the right edge
+        if (!rightEdge) currentPosition +=1;
+        if (current.some(index => blox[currentPosition + index].classList.contains('taken'))) {
+            currentPosition -=1;
+        }
+        draw();
+    }
 
 
 });
