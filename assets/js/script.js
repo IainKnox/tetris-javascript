@@ -136,9 +136,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //create a function to turn the tetromino around so as to get it to fill gaps and complete lines
     function turnShape() {
-        undraw(); //undraw the current rotation
+        undraw(); //undraw the current tetromino 
         currentRotation++; //increment the rotation by one
-        if (currentRotation === current.length) {
+        if (currentRotation === current.length) {   
             currentRotation = 0; //set new rotation 
         }
         current = theTetrominoes[random][currentRotation];

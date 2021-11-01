@@ -1,5 +1,5 @@
-Tetris Javascript
-In this project I have created a new website to demostrate my understanding of the concepts of javascript with a Tetris game. 
+## Tetris Javascript
+In this project I have created a page to demonstrate my understanding of the concepts of *javascript* with a Tetris game. 
 
 I approached this project with mobile first design principles to create a responsive webpage that is intended to look good and and perform well on any size of device. I have also put good user experience at the front and center of all designs and have strived to create an intuitive, informative and enjoyable journey for my users.
 
@@ -108,7 +108,7 @@ I have hosted my site on github pages, it can be accessed from the following url
  
 
 Credits
-A big shout out to my mentor, Cans for guding me through the process and offering assistance when neccesary to point me in the right direction.
+A big shout out to my mentor, Cans for guiding me through the process and offering assistance when neccessary to point me in the right direction.
 
 The community on Slack, the help and feedback a student is able to receive from the peers and alumni is a really invaluable tool to have.
 
@@ -117,7 +117,9 @@ The community on Slack, the help and feedback a student is able to receive from 
  
 
 Content
-Much of the information regarding Tetris, its styles and origins where taken from various wikipedia articles, old gaming sites
+Much of the information regarding Tetris, its styles and origins where taken from various wikipedia articles, old gaming sites:
+
+Link to the Tetris wiki, full of inspiration [Tetris Wiki](https://en.wikipedia.org/wiki/Tetris)
 
 The color was inspired by the old school bright neon colours and running various searches through google with the keyword Tetris and then further refined with the help of sites such as Color Space and Coolors
 
