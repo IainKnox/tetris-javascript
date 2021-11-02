@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const width = 10;
     console.log(grid);
     console.log(blox); //checking to make sure the array is correct
+    const startButton = document.getElementById('#start-button');
 
 
     /**
@@ -145,5 +146,11 @@ document.addEventListener('DOMContentLoaded', () => {
         draw(); //draw the new rotation 
     }
 
+    // //creates a function to enable the Start button
+    // function startButton() {
+    //     document.addEventListener('onclick', startButton);
+    //     moveDown();
+
+    // }
 
 });
