@@ -1,10 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementsByClassName('toggle-btn')[0];
+    const navbar = document.getElementsByClassName('navbar-links')[0];
     const grid = document.querySelector('.grid');
     let blox = Array.from(document.querySelectorAll('.grid div'));
     const width = 10;
     console.log(grid);
     console.log(blox); //checking to make sure the array is correct
     const startButton = document.getElementById('#start-button');
+
+    // create a function that toggles the hamburger navigation menu
+    toggle.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+    })
 
 
     /**
@@ -148,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // //creates a function to enable the Start button
     // function startButton() {
-    //     document.addEventListener('onclick', startButton);
+    //     document.addEventListener('click', startButton);
     //     moveDown();
 
     // }
