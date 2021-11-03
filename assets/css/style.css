@@ -162,8 +162,8 @@
     height: 20px;   
 }
 
-/* base color for tetromino to diplay within the grid */
-.tetromino {
+/* base color for tetrimino to display within the grid */
+.tetrimino {
     background-color: violet;
     
 }
