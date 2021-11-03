@@ -58,10 +58,11 @@
     background-color: #5F634F;
 }
 
-.active {
+.navbar-links .active {
     background-color: #5F634F;
 }
 
+/* create a hamburger menu for mobile displays*/
 .toggle-btn {
     position: absolute;
     top: 1.2rem;
@@ -175,7 +176,7 @@ footer {
 }
 
 footer p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Assistant', sans-serif;
     font-size: .8rem;
     padding: .25rem;
     text-align: center;
@@ -202,9 +203,9 @@ footer p {
 /* an arrow fixed to scroll with the screen, so that a user can quickly return to the top of the page */
 .arrow-top {
     position: fixed;
-    right: 0;
+    right: .5rem;
     bottom: .25rem;
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Rammetto One', sans-serif;
     font-size: 2rem;
     color: #cea716;
 }

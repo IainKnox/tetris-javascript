@@ -1,251 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tetris Javascript | An ode to gaming nostalgia, falling tetriminos and that catchy theme tune.">
+    <meta name="keywords" content="tetris, javascript, tetriminos, game, gaming, nostalgia">
     <link rel="stylesheet" href="/assets/css/style.css">
     <title>Tetris JS - Scores</title>
 </head>
+
 <body>
     <!-- navigation elements for User to access instruction, rules and scores-->
-    <div class="nav">
-        <ul class="navbar">
-            <li>How To Tetris</li>
-            <li>Rules</li>
-            <li>High Scores</li>
-        </ul>
-    </div>
+    <nav class="navbar">
+        <div class="brand-logo">
+            <a href="index.html" aria-label="returns the user to the top of the home page">
+                <h2>Tetris JS</h2>
+            </a>
+        </div>
+        <a href="#" class="toggle-btn">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li> <a href="index.html">Home</a></li>
+                <li> <a href="instructions.html">Instructions</a></li>
+                <li> <a href="tetris.html">Play Tetris</a></li>
+                <li> <a class="active" href="scores.html">Scores</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <div class="title">
         <h2>welcome to</h2>
         <h1>tetris js</h1>
         <button id="start-button">Start Game</button>
     </div>
-    <div class="score">Score: <span>0</span>
-        
-    </div>
-    
+    <footer>
+        <ul class="social-networks">
+            <li>
+                <a href="https://www.facebook.com/Tetris/" target="_blank" rel="noopener"
+                    aria-label="visit our facebook page (opens a new browser window)"><i
+                        class="fab fa-facebook-square"></i></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/Tetris_Official" target="_blank" rel="noopener"
+                    aria-label="visit our Instagram page (opens a new browser window)"><i
+                        class="fab fa-twitter-square"></i></a>
+            </li>
+            <li>
+                <a href="https://tetris.com/" target="_blank" rel="noopener"
+                    aria-label="visit the official Tetris homepage (opens a new browser window)"><i
+                        class="fas fa-gamepad"></i></a>
+            </li>
+        </ul>
+        <a class="arrow-top" href="#top" aria-label="return to the top of the page">
+            <i class="fas fa-arrow-alt-circle-up"></i>
+        </a>
+        <p>Copyright <span>&copy;</span> 2021 | Privacy Policy | Terms & Conditions</p>
+    </footer>
 
-    <!-- manually creating tetris grid -->
-    <div class="grid">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div class="taken"></div>
-        <div class="taken"></div>
-        <div class="taken"></div>
-        <div class="taken"></div>
-        <div class="taken"></div>
-        <div class="taken"></div>
-        <div class="taken"></div>
-        <div class="taken"></div>
-        <div class="taken"></div>
-        <div class="taken"></div>
-    </div>
-    
+    <script src="https://kit.fontawesome.com/0fb38816a1.js" crossorigin="anonymous"></script>
+    </footer>
 
-    <script src="/assets/js/script.js"></script>
-</body>
-<!--footer section for social links, copyright information    -->
-<footer>
-    <p>Copyright <span>&copy;</span> 2021 | Privacy Policy | Terms & Conditions</p>
-</footer>
 </html>
