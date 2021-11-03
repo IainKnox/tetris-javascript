@@ -143,6 +143,46 @@
     text-transform: uppercase;
 }
 
+.score-card table {
+    font-family: "Assistant",sans-serif;
+    width: 100%;
+    text-align: center;
+
+}
+
+/*button used on the landing page and game screen*/
+.buttons {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    
+}
+
+.btn {
+    width: 20ch;
+    font-family: 'Assistant', sans-serif;
+    font-size: 1.12rem;
+    font-weight: bold;
+
+    background-color: #03011e;
+    border: 2px solid #847655;
+    color: #847655;
+
+    padding: 1.25rem;
+    margin: 1rem auto;
+    border-radius: 10px;
+    justify-content: space-between;
+
+    transition: all 200ms ease-in-out;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #847655;
+    color: #fff;
+    cursor: pointer;
+}
+
 
 
 /* the grid created as the play area for housing the tetrominos */
