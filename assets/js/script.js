@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const width = 10;
     console.log(grid);
     console.log(blox); //checking to make sure the array is correct
-    const startButton = document.getElementById('#start-button');
+    const startButton = document.getElementById('start-button');
+    let timerId;
 
     // create a function that toggles the hamburger navigation menu
     toggle.addEventListener('click', () => {
@@ -80,9 +81,29 @@ document.addEventListener('DOMContentLoaded', () => {
             blox[currentPosition + index].classList.remove('tetrimino');
         });
     }
+    
     //add interval to move the tetrimino down the grid
     //this will be used to introduce difficulty by speeding the drop rate up
-    timerId = setInterval(moveDown, 1000);
+    //timerId = setInterval(moveDown, 1000);
+
+    // //creates a function to enable the Start button
+    // function startButton() {
+    //     document.addEventListener('click', startButton);
+    //     moveDown();
+
+    // }
+    // start button acts as start/pause game button
+    startButton.addEventListener('click', () => {
+        if(timerId) {
+            clearInterval(timerId);
+            timerId = null;
+            startButton.innerHTML ='Game Paused'; //change text to show gameplay is paused
+        } else {
+            draw();
+            timerId = setInterval(moveDown, 1000);
+            startButton.innerHTML = 'Started'; //change text to show gameplay is running
+        }
+    });
 
     //create a function to move the tetriminos down the grid
     function moveDown() {
@@ -153,11 +174,6 @@ document.addEventListener('DOMContentLoaded', () => {
         draw(); //draw the new rotation 
     }
 
-    // //creates a function to enable the Start button
-    // function startButton() {
-    //     document.addEventListener('click', startButton);
-    //     moveDown();
-
-    // }
+    
 
 });
