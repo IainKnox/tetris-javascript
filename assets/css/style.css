@@ -162,6 +162,15 @@
 
 }
 
+.sidebox {
+    height: 380px;
+    color: blue;
+    border: 2px solid red;
+    position: relative;
+    border-radius: 5px;
+
+}
+
 .box-content {
     margin: 0;
     position: absolute;
@@ -169,6 +178,10 @@
     top: 50%;
     transform: translate(-50%, -50%);
 
+}
+
+.box-content h2 {
+    display: none;
 }
 
 .score {
@@ -202,8 +215,8 @@
     border: 2px solid #847655;
     color: #847655;
 
-    padding: 1.25rem;
-    margin: 1rem auto;
+    padding: 1rem;
+    margin: .5rem auto;
     border-radius: 10px;
     justify-content: space-between;
 
@@ -227,7 +240,7 @@
     background-color: lightskyblue;
     display: flex;
     flex-wrap: wrap;
-    margin: 1.5rem auto;
+    margin: .25rem auto;
 }
 
 
@@ -235,7 +248,7 @@
     width: 20px;
     height: 20px;
 }
-
+/* mini grid that displays the next up tetrimino */
 .display-grid {
     width: 80px;
     height: 80px;
@@ -243,8 +256,22 @@
     background-color: lightskyblue;
     display: flex;
     flex-wrap: wrap;
-    margin: 1.5rem auto;
+    margin: 0 auto;
+    border:  2px solid blue;
 }
+.name {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.name h2 {
+    font-family: 'Rammetto One', sans-serif;
+    font-weight: lighter;
+    display: contents;
+    
+}
+
 
 .display-grid div {
     width: 20px;
