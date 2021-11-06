@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(blox); //checking to make sure the array is correct
     const startButton = document.getElementById('start-button');
     let timerId;
+    const playerScore = document.getElementsByClassName('score');
 
     // create a function that toggles the hamburger navigation menu
     toggle.addEventListener('click', () => {
@@ -181,6 +182,31 @@ document.addEventListener('DOMContentLoaded', () => {
         draw(); //draw the new rotation 
     }
 
+    //create function to add score to game for clearing lines
+    function addScore() {
+        for ( let i = 0; i < 199; i+=width);
+        const row = [i, 1+1, i+2, i+3, i+4, i+5, i+6, i+7, i+8, i+9];
+        if (row.every(index => blox[index].classList.contains('taken'))) {
+            score += 25;
+            playerScore.innerHTML = score;
+            row.forEach(index => {
+                blox[index].classList.remove('taken');
+                blox[index].classList.remove('tetrimino');
+                blox[index].style.backgroundColor = " ";
+            });
+            const bloxRemoved = blox.splice(i, width);
+            blox = bloxRemoved.concat(blox);
+            blox.forEach(cell => grid.appendChild(cell));
+        }
+    }
+
+    //game over condition
+    function gameOver() {
+        if (current.some(index => blox[currentPosition + index].classList.contains('taken'))) {
+            playerScore.innerHTML = 'Game Over';
+            clearInterval(timerId);
+        }
+    }
     
 
 });
