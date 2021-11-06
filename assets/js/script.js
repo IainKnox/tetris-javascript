@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(blox); //checking to make sure the array is correct
     const startButton = document.getElementById('start-button');
     let timerId;
-    const playerScore = document.getElementsByClassName('score');
+    const playerScore = document.getElementById('score');
     let score = 0;
 
     // create a function that toggles the hamburger navigation menu
