@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const startButton = document.getElementById('start-button');
     let timerId;
     const playerScore = document.getElementsByClassName('score');
+    let score = 0;
 
     // create a function that toggles the hamburger navigation menu
     toggle.addEventListener('click', () => {
@@ -185,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //create function to add score to game for clearing lines
     function addScore() {
         for ( let i = 0; i < 199; i+=width);
-        const row = [i, 1+1, i+2, i+3, i+4, i+5, i+6, i+7, i+8, i+9];
+        const row = [i, i+1, i+2, i+3, i+4, i+5, i+6, i+7, i+8, i+9];
         if (row.every(index => blox[index].classList.contains('taken'))) {
             score += 25;
             playerScore.innerHTML = score;
@@ -200,13 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    //game over condition
-    function gameOver() {
-        if (current.some(index => blox[currentPosition + index].classList.contains('taken'))) {
-            playerScore.innerHTML = 'Game Over';
-            clearInterval(timerId);
-        }
-    }
+   
     
 
 });
