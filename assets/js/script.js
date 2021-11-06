@@ -16,14 +16,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     /**
-     * Create the arrays for each of the 5 Tetrimino shapes
-     * represented by l, z, t, b and i
+     * Create the arrays for each of the 6 Tetrimino shapes
+     * represented by q, p, z, t, b and i
      */
-    const lTetrimino = [
-        [1, width + 1, width * 2 + 1, 2],
+    const pTetrimino = [
+        [2, 1, width + 1, width * 2 + 1],
         [width, width + 1, width + 2, width * 2 + 2],
         [width * 2, width * 2 + 1, width + 1, 1],
         [0, width, width + 1, width + 2]
+    ];
+
+    const qTetrimino = [
+        [0, 1, width + 1, width * 2 + 1],
+        [width, width + 1, width + 2, 2],
+        [width * 2 + 2, width * 2 + 1, width + 1, 1],
+        [width * 2, width, width + 1, width + 2]
     ];
 
     const zTetrimino = [
@@ -54,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         [width * 2, width * 2 + 1, width * 2 + 2, width * 2 + 3]
     ];
 
-    const theTetriminos = [lTetrimino, zTetrimino, tTetrimino, bTetrimino, iTetrimino];
+    const theTetriminos = [pTetrimino, qTetrimino, zTetrimino, tTetrimino, bTetrimino, iTetrimino];
     console.log(theTetriminos[0][0]); // checking to ensure the tetriminos are output correctly
 
     //create an start position and rotation for the tetrimino
