@@ -4,18 +4,18 @@ In this project I have created a page to demonstrate my understanding of the con
 I approached this project with mobile first design principles to create a responsive webpage that is intended to look good and and perform well on any size of device. I have also put good user experience at the front and center of all designs and have strived to create an intuitive, informative and enjoyable journey for my users.
 
 User Stories
-I identified 2 groups of user for this site, firstly, users that are new to tetris and looking for fun and colourful experience. Secondly, experienced tertris players who are looking for a game that increases in difficulty over time testing their skill.
+I identified 2 groups of user for this site, firstly, users that are new to tetris and looking for fun and colourful experience. Secondly, experienced tetris players who are looking for a game that increases in difficulty over time testing their skill.
 New Users
 Should be able to quickly gain an overview of what the game is about via the landing page.
 Should be able to see how to play the game via the how to tetris page.
 Should be able to clearly understand the rules of the game via the rules page.
 Should be able to gain higher levels of experience as the game progresses.
-Should be able to get clear information of which tetrominoes are dropping next through the preview grid.
+Should be able to get clear information of which tetriminos are dropping next through the preview grid.
 Should be able to identify which keys are pressed and interact with the controls on the page.
 Existing Users
 Should be able to do all the above.
 Should be able to gain an high score and post that to the high scores page.
-Should be able to experience a sense of nostaligia through classic tetris elements.
+Should be able to experience a sense of nostalgia through classic tetris elements.
 From the above information I was able to determine what would be of considerable value when visiting the site and from that developed the following scope and goals:
 
 <!-- still to add -->
@@ -41,7 +41,7 @@ A difficulty setting, so as to start from a more advanced state of the game, rat
  
 
 Testing 1.0
-Throughout this project I have done regular testing. And have reloaded and refreshed the pages multiple times after each addition and modification. Various bugs were found in terms of images not diplaying correctly, positioning, buttons and links not working. Mostly through revision of the HTML and CSS course work and some external googling I was able to squash most bugs I encountered.
+Throughout this project I have done regular testing. And have reloaded and refreshed the pages multiple times after each addition and modification. Various bugs were found in terms of images not displaying correctly, positioning, buttons and links not working. Mostly through revision of the HTML and CSS course work and some external googling I was able to squash most bugs I encountered.
 
 My first round of testing was functionality testing in which I performed the following actions.
 
@@ -86,9 +86,9 @@ My second round of testing involved accessibility and readability, checking the 
 Contrast Checker
 The first port of call with regards to contrast was Eightshapes Contrast Grid so as to best understand the contrast between all the elements of the site, ensure fonts were readable against backgrounds and that font sizing was consistent to maintain accessibility.
 The resulting output was the following Eightshapes - Yoga Republic
-The site was tested using A11y colour contrast accessibility checker Contrast Checker to ensure maximum readability and accesibility.
+The site was tested using A11y colour contrast accessibility checker Contrast Checker to ensure maximum readability and accessibility.
 A11y - 
-The site was tested using WAVE, web accessibility evaluation tool Webaim to ensure accessibility criterea were met.
+The site was tested using WAVE, web accessibility evaluation tool Webaim to ensure accessibility criteria were met.
 Lighthouse Scores
 The site was tested for both mobile and desktop scores via Google Lighthouse with multiple tests being conducted.
 index.html Lighthouse
@@ -102,13 +102,13 @@ The site was tested with the amireponsive tool to determine how well it would lo
 
 Deployment
 I have hosted my site on github pages, it can be accessed from the following url:
-<!-- need to add more information to this area and explain the proccess in more detail -->
+<!-- need to add more information to this area and explain the process in more detail -->
 
 
  
 
 Credits
-A big shout out to my mentor, Cans for guiding me through the process and offering assistance when neccessary to point me in the right direction.
+A big shout out to my mentor, Cans for guiding me through the process and offering assistance when necessary to point me in the right direction.
 
 The community on Slack, the help and feedback a student is able to receive from the peers and alumni is a really invaluable tool to have.
 
@@ -135,8 +135,8 @@ Icons used throughout the site for social media and card graphics were sourced f
  
 
 Other Resources
-To better add to my understanding, markdown syntax was reseached from Markdown Syntax to aid in compiling and styiling this README document :)
+To better add to my understanding, markdown syntax was researched from Markdown Syntax to aid in compiling and styling this README document :)
 
-While most programming happened at unsocialable hours, when I really got stuck the web is an invaluable resource too, I did a fair amount of review on W3 Schools, MDN Mozilla. As I often felt like I was traversing an alien world, I got my hands on reference books such as Javascript and JQuery: Interactive Front-End Web Development by Jon Duckett, Javascript: The Good Parts by Douglas Crockford and Eloquent Javascript, 3rd Edition by Marijn Haverbeke. 
+While most programming happened at unsociable hours, when I really got stuck the web is an invaluable resource too, I did a fair amount of review on W3 Schools, MDN Mozilla. As I often felt like I was traversing an alien world, I got my hands on reference books such as Javascript and JQuery: Interactive Front-End Web Development by Jon Duckett, Javascript: The Good Parts by Douglas Crockford and Eloquent Javascript, 3rd Edition by Marijn Haverbeke. 
 
  
