@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let timerId;
     const playerScore = document.getElementById('score');
     let score = 0;
+    const gameLine = document.getElementById('lines');
+    let lines = 0;
 
     // create a function that toggles the hamburger navigation menu
     toggle.addEventListener('click', () => {
@@ -190,8 +192,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const row = [i, i + 1, i + 2, i + 3, i + 4, i + 5, i + 6, i + 7, i + 8, i + 9];
 
             if (row.every(index => blox[index].classList.contains('taken'))) {
-                score += 25;
+                score += 15;
                 playerScore.innerHTML = score;
+                lines += 1;
+                gameLine.innerHTML = lines;
                 row.forEach(index => {
                     blox[index].classList.remove('taken');
                     blox[index].classList.remove('tetrimino');
