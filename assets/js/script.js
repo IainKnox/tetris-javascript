@@ -132,6 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
             current = theTetriminos[random][currentRotation];
             currentPosition = 3;
             draw();
+            addScore();
         }
     }
 
