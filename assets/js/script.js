@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
             blox[currentPosition + index].classList.remove('tetrimino');
         });
     }
-    
+
     //add interval to move the tetrimino down the grid
     //this will be used to introduce difficulty by speeding the drop rate up
     //timerId = setInterval(moveDown, 1000);
@@ -103,10 +103,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // }
     // start button acts as start/pause game button
     startButton.addEventListener('click', () => {
-        if(timerId) {
+        if (timerId) {
             clearInterval(timerId);
             timerId = null;
-            startButton.innerHTML ='Game Paused'; //change text to show gameplay is paused
+            startButton.innerHTML = 'Game Paused'; //change text to show gameplay is paused
         } else {
             draw();
             timerId = setInterval(moveDown, 1000);
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function turnShape() {
         undraw(); //undraw the current tetrimino 
         currentRotation++; //increment the rotation by one
-        if (currentRotation === current.length) {   
+        if (currentRotation === current.length) {
             currentRotation = 0; //set new rotation 
         }
         current = theTetriminos[random][currentRotation];
@@ -186,23 +186,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //create function to add score to game for clearing lines
     function addScore() {
-        for ( let i = 0; i < 199; i+=width);
-        const row = [i, i+1, i+2, i+3, i+4, i+5, i+6, i+7, i+8, i+9];
-        if (row.every(index => blox[index].classList.contains('taken'))) {
-            score += 25;
-            playerScore.innerHTML = score;
-            row.forEach(index => {
-                blox[index].classList.remove('taken');
-                blox[index].classList.remove('tetrimino');
-                blox[index].style.backgroundColor = " ";
-            });
-            const bloxRemoved = blox.splice(i, width);
-            blox = bloxRemoved.concat(blox);
-            blox.forEach(cell => grid.appendChild(cell));
+        for (let i = 0; i < 199; i += width) {
+            const row = [i, i + 1, i + 2, i + 3, i + 4, i + 5, i + 6, i + 7, i + 8, i + 9];
+
+            if (row.every(index => blox[index].classList.contains('taken'))) {
+                score += 25;
+                playerScore.innerHTML = score;
+                row.forEach(index => {
+                    blox[index].classList.remove('taken');
+                    blox[index].classList.remove('tetrimino');
+                });
+                const bloxRemoved = blox.splice(i, width);
+                blox = bloxRemoved.concat(blox);
+                blox.forEach(cell => grid.appendChild(cell));
+            }
         }
     }
 
-   
-    
+
 
 });
