@@ -47,5 +47,6 @@
       "Tetris",
       "toolsai",
       "Webaim"
-   ]
+   ],
+   "editor.fontFamily": "arial, 'Courier New', monospace"
 }

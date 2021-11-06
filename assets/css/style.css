@@ -6,8 +6,9 @@
     padding: 0;
     border: none;
     scroll-behavior: smooth;
-
 }
+
+
 
 /* navigation bar */
 .navbar {
@@ -138,13 +139,45 @@
     background-color: blueviolet;
     box-shadow: 0px 2px 8px 0px red;
 }
+
+/*game page panels*/
+.panels {
+    margin: 2rem;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 15px;
+    justify-content: center;
+    align-items: center;
+    /*background-color: #03011e;*/
+
+}
+
+.box {
+    height: 500px;
+    color: blue;
+    border: 2px solid red;
+    position: relative;
+    border-radius: 5px;
+
+}
+
+.box-content {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
 .score {
     text-align: center;
     text-transform: uppercase;
 }
 
 .score-card table {
-    font-family: "Assistant",sans-serif;
+    font-family: "Assistant", sans-serif;
     width: 100%;
     text-align: center;
 
@@ -155,7 +188,7 @@
     text-align: center;
     margin: 0 auto;
     display: block;
-    
+
 }
 
 .btn {
@@ -185,7 +218,7 @@
 
 
 
-/* the grid created as the play area for housing the tetrominos */
+/* the grid created as the play area for housing the tetriminos */
 .grid {
     width: 200px;
     height: 400px;
@@ -194,18 +227,18 @@
     display: flex;
     flex-wrap: wrap;
     margin: 1.5rem auto;
-    }
+}
 
 
-    .grid div {
+.grid div {
     width: 20px;
-    height: 20px;   
+    height: 20px;
 }
 
 /* base color for tetrimino to display within the grid */
 .tetrimino {
     background-color: violet;
-    
+
 }
 
 
