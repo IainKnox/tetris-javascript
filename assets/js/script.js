@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let score = 0;
     const gameLine = document.getElementById('lines');
     let lines = 0;
+    const playerLevel = document.getElementById('levels');
+    let level = 0;
 
     // create a function that toggles the hamburger navigation menu
     toggle.addEventListener('click', () => {
@@ -195,7 +197,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 score += 15;
                 playerScore.innerHTML = score;
                 lines += 1;
-                gameLine.innerHTML = lines;
+                gameLine.innerHTML = lines; {
+                    if (lines % 3 === 0 && lines < 1001) {
+                        level += 1;
+                        playerLevel.innerHTML = level;
+                    }
+                }
                 row.forEach(index => {
                     blox[index].classList.remove('taken');
                     blox[index].classList.remove('tetrimino');
