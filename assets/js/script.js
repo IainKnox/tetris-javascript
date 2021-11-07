@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let level = 0;
     const gameMusic = document.getElementById('music');
     const soundButton = document.getElementById('play');
+    
 
     // create a function that toggles the hamburger navigation menu
     toggle.addEventListener('click', () => {
@@ -155,9 +156,10 @@ document.addEventListener('DOMContentLoaded', () => {
             //introduce a new tetrimino to the grid
             random = Math.floor(Math.random() * theTetriminos.length);
             current = theTetriminos[random][currentRotation];
-            currentPosition = 3;
+            currentPosition = 4;
             draw();
             addScore();
+            gameOver();
         }
     }
 
@@ -232,6 +234,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 blox = bloxRemoved.concat(blox);
                 blox.forEach(cell => grid.appendChild(cell));
             }
+        }
+    }
+
+    //create a function to check the gameOver conditions
+    function gameOver() {
+        if  (current.some(index => blox[currentPosition + index].classList.contains('taken'))) {
+            playerScore.innerHTML = 'Game Over';
         }
     }
 
