@@ -16,17 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let level = 0;
     const gameMusic = document.getElementById('music');
     const soundButton = document.getElementById('play');
-   
-
-    // //create a function to reset all the variables on gameOver 
-    // function resetGame() {
-    //     let timerId;
-    //     let score = 0;
-    //     let lines = 0;
-    //     let level = 0;
-    //     let currentPosition = 4;
-    //     let currentRotation = 0;
-    // }
 
 
     // create a function that toggles the hamburger navigation menu
@@ -121,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             blox[currentPosition + index].classList.add('tetrimino');
         });
     }
-    // draw(); //testing to see if a random tetrimino appears on the grid
+    //console.log(draw()); //testing to see if a random tetrimino appears on the grid
 
     //remove the tetrimino from the grid with an undraw function
     function undraw() {
@@ -134,12 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //this will be used to introduce difficulty by speeding the drop rate up
     //timerId = setInterval(moveDown, 1000);
 
-    // //creates a function to enable the Start button
-    // function startButton() {
-    //     document.addEventListener('click', startButton);
-    //     moveDown();
-
-    // }
     // start button acts as start/pause game button
     startButton.addEventListener('click', () => {
         if (timerId) {
@@ -173,7 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
             draw();
             addScore();
             gameOver();
-            //resetGlobalVariables();
         }
     }
 
@@ -193,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault(); // prevents default screen movement when pressing the arrow keys
 
         if (event.keyCode === 37) {
-            moveLeft();   
+            moveLeft();
         } else if (event.keyCode === 39) {
             moveRight();
         } else if (event.keyCode === 40) {
@@ -202,6 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
             turnShape();
         }
     }
+
     //create an event listener to listen for keypresses and invoke the control functions
     document.addEventListener('keydown', control);
 
@@ -240,13 +223,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (lines % 5 === 0 && lines < 1001) { //increment the level for every 5 lines cleared
                         level += 1;
                         playerLevel.innerHTML = level;
-                        }
                     }
                 }
+
                 row.forEach(index => {
                     blox[index].classList.remove('taken');
                     blox[index].classList.remove('tetrimino');
-                });
+                })
                 const bloxRemoved = blox.splice(i, width);
                 blox = bloxRemoved.concat(blox);
                 blox.forEach(cell => grid.appendChild(cell));
@@ -257,13 +240,10 @@ document.addEventListener('DOMContentLoaded', () => {
     //create a function to check the gameOver conditions
     function gameOver() {
         if (current.some(index => blox[currentPosition + index].classList.contains('taken'))) {
-            playerScore.innerHTML = 'Game Over';
             clearInterval(timerId);
             startButton.innerHTML = 'Game Over';
             startButton.disabled = true;
-            // resetGame();
         }
-
     }
 
 
