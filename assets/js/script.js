@@ -16,6 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let level = 0;
     const gameMusic = document.getElementById('music');
     const soundButton = document.getElementById('play');
+    const colours = [
+        'MidnightBlue',
+        'Khaki',
+        'Orange',
+        'HotPink',
+        'DarkRed',
+        'Chocolate',
+        'Magenta'        
+    ];
 
 
     // create a function that toggles the hamburger navigation menu
@@ -108,6 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function draw() {
         current.forEach(index => {
             blox[currentPosition + index].classList.add('tetrimino');
+            blox[currentPosition + index].style.backgroundColor = colours[random];
         });
     }
     //console.log(draw()); //testing to see if a random tetrimino appears on the grid
@@ -116,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function undraw() {
         current.forEach(index => {
             blox[currentPosition + index].classList.remove('tetrimino');
+            blox[currentPosition + index].style.backgroundColor = '';
         });
     }
 
@@ -229,7 +240,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 row.forEach(index => {
                     blox[index].classList.remove('taken');
                     blox[index].classList.remove('tetrimino');
-                })
+                    blox[index].style.backgroundColor = '';
+                });
                 const bloxRemoved = blox.splice(i, width);
                 blox = bloxRemoved.concat(blox);
                 blox.forEach(cell => grid.appendChild(cell));
@@ -239,10 +251,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //create a function to check the gameOver conditions
     function gameOver() {
-        if (current.some(index => blox[currentPosition + index].classList.contains('taken'))) {
-            clearInterval(timerId);
+        if (current.some(index => blox[currentPosition + index].classList.contains('taken'))) { // check to see if a taken shape is at the original index position 
+            clearInterval(timerId); // stop the moveDown() function
             startButton.innerHTML = 'Game Over';
-            startButton.disabled = true;
+            startButton.disabled = true; //disable the start button so that the game cannot continue
         }
     }
 
