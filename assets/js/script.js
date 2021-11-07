@@ -241,6 +241,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function gameOver() {
         if  (current.some(index => blox[currentPosition + index].classList.contains('taken'))) {
             playerScore.innerHTML = 'Game Over';
+            clearInterval(timerId);
+            startButton.innerHTML = 'Game Over - Try Again?'
         }
     }
 
