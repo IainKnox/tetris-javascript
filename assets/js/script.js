@@ -16,6 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let level = 0;
     const gameMusic = document.getElementById('music');
     const soundButton = document.getElementById('play');
+
+    // //create a function to reset all the variables on gameOver 
+    // function resetGlobalVariables() {
+    //     let timerId;
+    //     let score = 0;
+    //     let lines = 0;
+    //     let level = 0;
+    //     let currentPosition = 4;
+    //     let currentRotation = 0;
+    // }
     
 
     // create a function that toggles the hamburger navigation menu
@@ -160,6 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
             draw();
             addScore();
             gameOver();
+            //resetGlobalVariables();
         }
     }
 
@@ -242,8 +253,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if  (current.some(index => blox[currentPosition + index].classList.contains('taken'))) {
             playerScore.innerHTML = 'Game Over';
             clearInterval(timerId);
-            startButton.innerHTML = 'Game Over - Try Again?'
+            startButton.innerHTML = 'Game Over';
+            startButton.disabled = true;
         }
+        
     }
 
 
