@@ -221,6 +221,25 @@
     text-decoration: none;
 }
 
+.un-btn {
+    width: 20ch;
+    font-family: 'Assistant', sans-serif;
+    font-size: 1.12rem;
+    font-weight: bold;
+
+    background-color: #03011e;
+    border: 2px solid #847655;
+    color: #847655;
+
+    padding: 1rem;
+    margin: .5rem auto;
+    border-radius: 10px;
+    justify-content: space-between;
+
+    transition: all 200ms ease-in-out;
+    text-decoration: none;
+}
+
 .btn:hover {
     background: #847655;
     color: #fff;
