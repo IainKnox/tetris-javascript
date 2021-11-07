@@ -156,7 +156,7 @@
 }
 /* main panel for the game grid and start button*/
 .box {
-    height: 500px;
+    height: 520px;
     border: 2px solid red;
     position: relative;
     border-radius: 5px;

@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //     let currentPosition = 4;
     //     let currentRotation = 0;
     // }
-    
+
 
     // create a function that toggles the hamburger navigation menu
     toggle.addEventListener('click', () => {
@@ -54,8 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     /**
-     * Create the arrays for each of the 6 Tetrimino shapes
-     * represented by q, p, z, t, b and i
+     * Create the arrays for each of the 7 Tetrimino shapes
+     * represented by q, p, s, z, t, b and i
      */
     const pTetrimino = [
         [2, 1, width + 1, width * 2 + 1],
@@ -71,11 +71,18 @@ document.addEventListener('DOMContentLoaded', () => {
         [width * 2, width, width + 1, width + 2]
     ];
 
-    const zTetrimino = [
+    const sTetrimino = [
         [width * 2, width * 2 + 1, width + 1, width + 2],
         [0, width, width + 1, width * 2 + 1],
         [2, 1, width + 1, width],
         [width * 2 + 2, width + 2, width + 1, 1]
+    ];
+
+    const zTetrimino = [
+        [width, width + 1, width * 2 + 1, width * 2 + 2],
+        [1, width + 1, width, width * 2],
+        [0, 1, width + 1, width + 2],
+        [width * 2 + 1, width + 1, width + 2, 2]
     ];
 
     const tTetrimino = [
@@ -85,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
         [width, 1, width + 1, width * 2 + 1]
     ];
 
+    //square tetrimino - called b for block
     const bTetrimino = [
         [0, 1, width, width + 1],
         [1, 2, width + 1, width + 2],
@@ -99,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         [width * 2, width * 2 + 1, width * 2 + 2, width * 2 + 3]
     ];
 
-    const theTetriminos = [pTetrimino, qTetrimino, zTetrimino, tTetrimino, bTetrimino, iTetrimino];
+    const theTetriminos = [pTetrimino, qTetrimino, sTetrimino, zTetrimino, tTetrimino, bTetrimino, iTetrimino];
     console.log(theTetriminos[0][0]); // checking to ensure the tetriminos are output correctly
 
     //create an start position and rotation for the tetrimino
@@ -250,13 +258,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //create a function to check the gameOver conditions
     function gameOver() {
-        if  (current.some(index => blox[currentPosition + index].classList.contains('taken'))) {
+        if (current.some(index => blox[currentPosition + index].classList.contains('taken'))) {
             playerScore.innerHTML = 'Game Over';
             clearInterval(timerId);
             startButton.innerHTML = 'Game Over';
             startButton.disabled = true;
         }
-        
+
     }
 
 
