@@ -227,6 +227,12 @@
     cursor: pointer;
 }
 
+.music {
+    padding: 1rem;
+    margin: .5rem auto;
+    justify-content: space-between;
+}
+
 
 
 /* the grid created as the play area for housing the tetriminos */

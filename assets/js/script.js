@@ -14,11 +14,32 @@ document.addEventListener('DOMContentLoaded', () => {
     let lines = 0;
     const playerLevel = document.getElementById('levels');
     let level = 0;
+    const gameMusic = document.getElementById('music');
+    const soundButton = document.getElementById('play');
 
     // create a function that toggles the hamburger navigation menu
     toggle.addEventListener('click', () => {
         navbar.classList.toggle('active');
     });
+
+    // create a function that toggles the music on or off using a button click
+    soundButton.addEventListener('click', () => {
+        if (gameMusic.muted == false) {
+            gameMusic.muted = true;
+            soundButton.innerHTML = 'Music Paused';
+        } else {
+            gameMusic.muted = false;
+            gameMusic.play();
+            gameMusic.volume = 0.3;
+            gameMusic.loop = true;
+            soundButton.innerHTML = 'Music Playing';
+        }
+    });
+
+
+
+
+
 
 
     /**
@@ -190,15 +211,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //create function to add score to game for clearing lines
     function addScore() {
-        for (let i = 0; i < 199; i += width) {
+        for (let i = 0; i < 199; i += width) { // for loop to iterate through the entire grid
             const row = [i, i + 1, i + 2, i + 3, i + 4, i + 5, i + 6, i + 7, i + 8, i + 9];
 
             if (row.every(index => blox[index].classList.contains('taken'))) {
-                score += 15;
+                score += 15; //increment the player score by 15 for every line cleared
                 playerScore.innerHTML = score;
-                lines += 1;
+                lines += 1; //add 1 to the player dashboard to show the player how many lines they've cleared
                 gameLine.innerHTML = lines; {
-                    if (lines % 3 === 0 && lines < 1001) {
+                    if (lines % 5 === 0 && lines < 1001) { //increment the level for every 5 lines cleared
                         level += 1;
                         playerLevel.innerHTML = level;
                     }
