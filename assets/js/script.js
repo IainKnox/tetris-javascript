@@ -16,9 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let level = 0;
     const gameMusic = document.getElementById('music');
     const soundButton = document.getElementById('play');
+   
 
     // //create a function to reset all the variables on gameOver 
-    // function resetGlobalVariables() {
+    // function resetGame() {
     //     let timerId;
     //     let score = 0;
     //     let lines = 0;
@@ -46,12 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
             soundButton.innerHTML = 'Music Playing';
         }
     });
-
-
-
-
-
-
 
     /**
      * Create the arrays for each of the 7 Tetrimino shapes
@@ -195,8 +190,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //create a function to bind directional movement to the arrow keys on the keyboard
     function control(event) {
+        event.preventDefault(); // prevents default screen movement when pressing the arrow keys
+
         if (event.keyCode === 37) {
-            moveLeft();
+            moveLeft();   
         } else if (event.keyCode === 39) {
             moveRight();
         } else if (event.keyCode === 40) {
@@ -243,6 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (lines % 5 === 0 && lines < 1001) { //increment the level for every 5 lines cleared
                         level += 1;
                         playerLevel.innerHTML = level;
+                        }
                     }
                 }
                 row.forEach(index => {
@@ -263,6 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
             clearInterval(timerId);
             startButton.innerHTML = 'Game Over';
             startButton.disabled = true;
+            // resetGame();
         }
 
     }
