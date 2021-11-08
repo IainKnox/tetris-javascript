@@ -152,6 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
             draw();
             timerId = setInterval(moveDown, 1000);
             startButton.innerHTML = 'Started'; //change text to show gameplay is running
+            nextUp();
         }
     });
 
@@ -266,15 +267,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    //create a next up display grid so the player knows which tetrimino is falling next
     function createNextUpGrid() {
         for (let i = 0; i <= numberOfBloxMini; i++) {
             const cell = document.createElement('div');
             nextCells.push(cell);
-            cell.innerHTML = i     // label the cells
+            // cell.innerHTML = i     // label the cells
             nextGrid.appendChild(cell);
         }
     }
     createNextUpGrid();
+    const nextIndex = 0;
+    const bloxMini = document.querySelectorAll('.display-grid div');
+
+    //display next up tetrimino in the display grid
+    function nextUp() {
+        bloxMini.forEach(blox => {
+            blox.classList.remove('tetrimino');
+        });
+        theTetriminos[random].forEach( index => {
+            bloxMini[nextIndex + index].classList.add('tetrimino');
+        });
+    }
+    
 
 
 
