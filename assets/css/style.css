@@ -233,7 +233,8 @@
 .control-btn {
     max-width: 15ch;
     font-family: 'Assistant', sans-serif;
-    font-size: 1rem;
+    font-size: 1.12rem;
+    font-weight: bold;
    
     display: inline-block;
     background-color: #03011e;
@@ -241,7 +242,7 @@
     color: #847655;
 
     padding: .5rem;
-    margin: .25rem auto;
+    margin: .25rem 1rem;
     border-radius: 10px;
   
     transition: all 200ms ease-in-out;
