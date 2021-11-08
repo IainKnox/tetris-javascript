@@ -222,21 +222,27 @@
     text-decoration: none;
 }
 
+.controls {
+   text-align: center;
+   margin:  0 auto;
+   border:  1px dashed blue;
+
+}
+
 .control-btn {
-    max-width: 10ch;
+    max-width: 15ch;
     font-family: 'Assistant', sans-serif;
     font-size: 1rem;
    
-
+    display: inline-block;
     background-color: #03011e;
     border: 2px solid #847655;
     color: #847655;
 
     padding: .5rem;
-    margin: .5rem auto;
+    margin: .25rem auto;
     border-radius: 10px;
-    justify-content: space-between;
-
+  
     transition: all 200ms ease-in-out;
     text-decoration: none;
 }
@@ -261,6 +267,12 @@
 }
 
 .btn:hover {
+    background: #847655;
+    color: #fff;
+    cursor: pointer;
+}
+
+.control-btn:hover {
     background: #847655;
     color: #fff;
     cursor: pointer;
