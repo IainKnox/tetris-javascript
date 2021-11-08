@@ -280,8 +280,9 @@
 }
 
 .name h2 {
-    font-family: 'Rammetto One', sans-serif;
-    font-weight: lighter;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: .8rem;
+    margin: 10px;
     visibility: visible;
 }
 
@@ -290,16 +291,17 @@
     width: 80px;
     height: 80px;
     border-radius: 5px;
-    background-color: lightskyblue;
+    background-color: lightgray;
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    border:  2px solid blue;
+    border:  2px solid violet;
 }
 
 .display-grid div {
     width: 20px;
     height: 20px;
+    border: 1px solid black;;
 }
 
 /* fallback color for tetrimino to display within the grid */

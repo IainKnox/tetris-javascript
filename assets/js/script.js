@@ -16,6 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let level = 0;
     const gameMusic = document.getElementById('music');
     const soundButton = document.getElementById('play');
+    const nextGrid = document.querySelector('.display-grid');
+    const nextCells = [ ];
+
+    // nextUpGrid dimensions
+    const nextWidth = 4;
+    const nextHeight = 4;
+    const numberOfBloxMini = (nextWidth * nextHeight);
+
     const colours = [
         'MidnightBlue',
         'Khaki',
@@ -23,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'HotPink',
         'DarkRed',
         'Chocolate',
-        'Magenta'        
+        'Magenta'
     ];
 
 
@@ -257,6 +265,16 @@ document.addEventListener('DOMContentLoaded', () => {
             startButton.disabled = true; //disable the start button so that the game cannot continue
         }
     }
+
+    function createNextUpGrid() {
+        for (let i = 0; i <= numberOfBloxMini; i++) {
+            const cell = document.createElement('div');
+            nextCells.push(cell);
+            cell.innerHTML = i     // label the cells
+            nextGrid.appendChild(cell);
+        }
+    }
+    createNextUpGrid();
 
 
 
