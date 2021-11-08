@@ -222,6 +222,25 @@
     text-decoration: none;
 }
 
+.control-btn {
+    max-width: 10ch;
+    font-family: 'Assistant', sans-serif;
+    font-size: 1rem;
+   
+
+    background-color: #03011e;
+    border: 2px solid #847655;
+    color: #847655;
+
+    padding: .5rem;
+    margin: .5rem auto;
+    border-radius: 10px;
+    justify-content: space-between;
+
+    transition: all 200ms ease-in-out;
+    text-decoration: none;
+}
+
 .un-btn {
     width: 20ch;
     font-family: 'Assistant', sans-serif;

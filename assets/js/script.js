@@ -208,6 +208,25 @@ document.addEventListener('DOMContentLoaded', () => {
     //create an event listener to listen for keypresses and invoke the control functions
     document.addEventListener('keydown', control);
 
+    //create event listener to listen for mouse clicks and invoke the control functions
+    const leftButton = document.getElementById('left');
+    const rotateButton = document.getElementById('rotate');
+    const rightButton = document.getElementById('right');
+    const downButton = document.getElementById('down');
+    
+
+    leftButton.addEventListener('click', () => {
+        moveLeft();
+    });
+    rotateButton.addEventListener('click', () => {
+        turnShape();
+    });
+    rightButton.addEventListener('click', () => {
+        moveRight();
+    });downButton.addEventListener('click', () => {
+        moveDown();
+    });
+
     //create a function to move the tetrimino to the right until it reaches the edge of the grid
     function moveRight() {
         undraw();
