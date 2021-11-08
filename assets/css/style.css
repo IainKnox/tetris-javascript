@@ -165,8 +165,13 @@
 
 }
 /* create smaller side panels for the buttons and game information*/
-.sidebox {
+.sidebox1 {
     height: 320px;
+}
+
+/* create smaller side panels for the buttons and game information*/
+.sidebox2 {
+    height: 250px;
 }
 
 .box-content {
@@ -204,6 +209,7 @@
 
 }
 
+/*styling for  the buttons that do some form of action on the site */
 .btn {
     width: 20ch;
     font-family: 'Assistant', sans-serif;
@@ -227,11 +233,13 @@
    text-align: center;
    margin:  0 auto;
    border:  1px dashed blue;
+  
 
 }
 
+/* styling for the control keys left, rotate, right and down */
 .control-btn {
-    max-width: 15ch;
+    max-width:  40ch;
     font-family: 'Assistant', sans-serif;
     font-size: 1.12rem;
     font-weight: bold;
@@ -249,6 +257,7 @@
     text-decoration: none;
 }
 
+/* styling for the game information blocks */
 .un-btn {
     width: 20ch;
     font-family: 'Assistant', sans-serif;
