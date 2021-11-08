@@ -145,7 +145,7 @@
 
 /*game page panels*/
 .panels {
-    margin: 1rem 2rem;
+    margin: 1rem 1rem;
     width: 95%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -165,7 +165,7 @@
 }
 /* create smaller side panels for the buttons and game information*/
 .sidebox {
-    height: 360px;
+    height: 380px;
 }
 
 .box-content {
@@ -284,7 +284,9 @@
     justify-content: space-between;
 }
 
-
+.grid-container {
+    display: flex;
+}
 
 /* the grid created as the play area for housing the tetriminos */
 .grid {
@@ -294,7 +296,6 @@
     background-color: lightgray;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
 }
 
 
@@ -325,8 +326,8 @@
     background-color: lightgray;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
     border:  2px solid violet;
+    margin-left: 10px;
 }
 
 .display-grid div {

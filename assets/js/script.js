@@ -26,11 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const colours = [
         'MidnightBlue',
-        'Khaki',
+        'Green',
         'Orange',
         'HotPink',
         'DarkRed',
-        'Chocolate',
+        'Brown',
         'Magenta'
     ];
 
