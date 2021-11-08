@@ -145,11 +145,11 @@
 
 /*game page panels*/
 .panels {
-    margin: 1rem 1rem;
+    margin: 0 1rem;
     width: 95%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 5px;
     justify-content: center;
     align-items: center;
     /*background-color: #03011e;*/
@@ -157,7 +157,7 @@
 }
 /* main panel for the game grid and start button*/
 .box {
-    height: 520px;
+    height: 460px;
     border: 2px solid red;
     position: relative;
     border-radius: 5px;
@@ -165,7 +165,7 @@
 }
 /* create smaller side panels for the buttons and game information*/
 .sidebox {
-    height: 340px;
+    height: 320px;
 }
 
 .box-content {
