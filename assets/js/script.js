@@ -17,12 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const gameMusic = document.getElementById('music');
     const soundButton = document.getElementById('play');
     const nextGrid = document.querySelector('.display-grid');
-    const nextCells = [ ];
+    // const nextCells = [ ];
 
-    // nextUpGrid dimensions
-    const nextWidth = 4;
-    const nextHeight = 4;
-    const numberOfBloxMini = (nextWidth * nextHeight);
+    // // nextUpGrid dimensions
+    // const nextWidth = 4;
+    // const nextHeight = 4;
+    // const numberOfBloxMini = (nextWidth * nextHeight);
 
     const colours = [
         'MidnightBlue',
@@ -106,6 +106,17 @@ document.addEventListener('DOMContentLoaded', () => {
         [width, width + 1, width + 2, width + 3],
         [2, width + 2, width * 2 + 2, width * 3 + 2],
         [width * 2, width * 2 + 1, width * 2 + 2, width * 2 + 3]
+    ];
+
+    //create the first position of the tetrimino in the display grid so the player can see whats up next
+    const  nextTetrimino = [
+        [2, 1, width + 1, width * 2 + 1], //pTetrimino
+        [0, 1, width + 1, width * 2 + 1], //qTetrimino
+        [width * 2, width * 2 + 1, width + 1, width + 2], //sTetrimino
+        [width, width + 1, width * 2 + 1, width * 2 + 2], //zTetrimino
+        [1, width, width + 1, width + 2], //tTetrimino
+        [0, 1, width, width + 1], //bTetrimino
+        [1, width + 1, width * 2 + 1, width * 3 + 1], //iTetrimino
     ];
 
     const theTetriminos = [pTetrimino, qTetrimino, sTetrimino, zTetrimino, tTetrimino, bTetrimino, iTetrimino];
@@ -286,28 +297,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    //create a next up display grid so the player knows which tetrimino is falling next
-    function createNextUpGrid() {
-        for (let i = 0; i <= numberOfBloxMini; i++) {
-            const cell = document.createElement('div');
-            nextCells.push(cell);
-            // cell.innerHTML = i     // label the cells
-            nextGrid.appendChild(cell);
-        }
-    }
-    createNextUpGrid();
-    const nextIndex = 0;
-    const bloxMini = document.querySelectorAll('.display-grid div');
+    // //create a next up display grid so the player knows which tetrimino is falling next
+    // function createNextUpGrid() {
+    //     for (let i = 0; i <= numberOfBloxMini; i++) {
+    //         const cell = document.createElement('div');
+    //         nextCells.push(cell);
+    //         // cell.innerHTML = i     // label the cells
+    //         nextGrid.appendChild(cell);
+    //     }
+    // }
+    // createNextUpGrid();
+    // const nextIndex = 0;
+    // const bloxMini = document.querySelectorAll('.display-grid div');
 
-    //display next up tetrimino in the display grid
-    function nextUp() {
-        bloxMini.forEach(blox => {
-            blox.classList.remove('tetrimino');
-        });
-        theTetriminos[random].forEach( index => {
-            bloxMini[nextIndex + index].classList.add('tetrimino');
-        });
-    }
+    // //display next up tetrimino in the display grid
+    // function nextUp() {
+    //     bloxMini.forEach(blox => {
+    //         blox.classList.remove('tetrimino');
+    //     });
+    //     theTetriminos[random].forEach( index => {
+    //         bloxMini[nextIndex + index].classList.add('tetrimino');
+    //     });
+    // }
 
     //create a high score function to store the players highest scores locally
     const highestScoreResults = document.getElementsByClassName('highest-score');
