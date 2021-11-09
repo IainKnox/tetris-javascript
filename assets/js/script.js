@@ -308,6 +308,29 @@ document.addEventListener('DOMContentLoaded', () => {
             bloxMini[nextIndex + index].classList.add('tetrimino');
         });
     }
+
+    //create a high score function to store the players highest scores locally
+    const highestScoreResults = document.getElementsByClassName('highest-score');
+
+    let highestScore = window.localStorage.getItem('highScore');
+    // let playerScore = 0;
+    // let gameLine = 0;
+    // let playerLevel = 0;
+
+    function updateScores() {
+        playerCurrentScore.innerHTML = playerScore;
+        playerCurrentLevel.innerHTML = playerLevel;
+        highestScoreResults.innerHTML = highScore === null ? 0 : highScore;
+    }
+
+    //storing scores locally
+    function updateHighScores() {
+        if (playerScore > highScore) {
+            highScore = playerScore;
+        }
+    }
+    document.addEventListener(updateScores());
+    
     
 
 

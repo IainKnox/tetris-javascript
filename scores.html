@@ -13,73 +13,72 @@
 </head>
 
 <body>
-    <!-- navigation elements for User to access instruction, rules and scores-->
-    <nav class="navbar">
-        <div class="brand-logo">
-            <a href="index.html" aria-label="returns the user to the top of the home page">
-                <h2>Tetris JS</h2>
+    <section class="nav">
+        <!-- navigation elements for User to access instruction, rules and scores-->
+        <nav class="navbar">
+            <div class="brand-logo">
+                <a href="index.html" aria-label="returns the user to the top of the home page">
+                    <h2>Tetris JS</h2>
+                </a>
+            </div>
+            <a href=" javascript:void(0);" class="toggle-btn">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
             </a>
+            <div class="navbar-links">
+                <ul>
+                    <li> <a href="index.html">Home</a></li>
+                    <li> <a href="instructions.html">Instructions</a></li>
+                    <li> <a href="tetris.html">Play Tetris</a></li>
+                    <li> <a class="active" href="scores.html">Scores</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+<!--    scores section that record the players highest scores locally -->
+    <section class="scoring">
+        <div class="scores">
+            <div class="high-score">Highest Score:</div>
+            <span class="highest-score" id="highest-score"></span>
+            <br>
+            <br>
+            <div class="player-score">Player Score:</div>
+            <span class="current-score" id="player-current-score"></span>
+            <br>
+            <br>
+            <div class="player-level">Current Level:</div>
+            <span class="current-level" id="current-level"></span>
         </div>
-        <a href=" javascript:void(0);" class="toggle-btn">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
+        
+    </section>
+
+    <!--footer section for social links, copyright information    -->
+    <footer>
+        <ul class="social-networks">
+            <li>
+                <a href="https://www.facebook.com/Tetris/" target="_blank" rel="noopener"
+                    aria-label="visit our facebook page (opens a new browser window)"><i
+                        class="fab fa-facebook-square"></i></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/Tetris_Official" target="_blank" rel="noopener"
+                    aria-label="visit our Instagram page (opens a new browser window)"><i
+                        class="fab fa-twitter-square"></i></a>
+            </li>
+            <li>
+                <a href="https://tetris.com/" target="_blank" rel="noopener"
+                    aria-label="visit the official Tetris homepage (opens a new browser window)"><i
+                        class="fas fa-gamepad"></i></a>
+            </li>
+        </ul>
+        <a class="arrow-top" href="#top" aria-label="return to the top of the page">
+            <i class="fas fa-arrow-alt-circle-up"></i>
         </a>
-        <div class="navbar-links">
-            <ul>
-                <li> <a href="index.html">Home</a></li>
-                <li> <a href="instructions.html">Instructions</a></li>
-                <li> <a href="tetris.html">Play Tetris</a></li>
-                <li> <a class="active" href="scores.html">Scores</a></li>
-            </ul>
-        </div>
-    </nav>
+        <p>Copyright <span>&copy;</span> 2021 | Privacy Policy | Terms & Conditions</p>
+    </footer>
 
-    <div class="title">
-        <h2>High Scores</h2>
-    </div>
-    <div class="score-container">
-        <div class="score-card">
-            <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Score</th>
-                </tr>
-                <tr>
-                    <td>AAA</td>
-                    <td>1500</td>
-                </tr>
-                <tr>
-                    <td>BBB</td>
-                    <td>1000</td>
-                </tr>
-            </table>
-        </div>
-        <footer>
-            <ul class="social-networks">
-                <li>
-                    <a href="https://www.facebook.com/Tetris/" target="_blank" rel="noopener"
-                        aria-label="visit our facebook page (opens a new browser window)"><i
-                            class="fab fa-facebook-square"></i></a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/Tetris_Official" target="_blank" rel="noopener"
-                        aria-label="visit our Instagram page (opens a new browser window)"><i
-                            class="fab fa-twitter-square"></i></a>
-                </li>
-                <li>
-                    <a href="https://tetris.com/" target="_blank" rel="noopener"
-                        aria-label="visit the official Tetris homepage (opens a new browser window)"><i
-                            class="fas fa-gamepad"></i></a>
-                </li>
-            </ul>
-            <a class="arrow-top" href="#top" aria-label="return to the top of the page">
-                <i class="fas fa-arrow-alt-circle-up"></i>
-            </a>
-            <p>Copyright <span>&copy;</span> 2021 | Privacy Policy | Terms & Conditions</p>
-        </footer>
-
-        <script src="https://kit.fontawesome.com/0fb38816a1.js" crossorigin="anonymous"></script>
-        </footer>
+    <script src="https://kit.fontawesome.com/0fb38816a1.js" crossorigin="anonymous"></script>
+    </footer>
 
 </html>
