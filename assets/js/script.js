@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
             next.classList.remove('tetrimino');
         });
         nextTetrimino[nextRandom].forEach(index => {
-            next[nextIndex + index].classList.add('tetrimino');
+            nextBlox[nextIndex + index].classList.add('tetrimino');
         });
     }
 
