@@ -165,7 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             current.forEach(index => blox[currentPosition + index].classList.add('taken'));
             //introduce a new tetrimino to the grid
-            random = Math.floor(Math.random() * theTetriminos.length);
+            random = nextRandom;
+            nextRandom = Math.floor(Math.random() * theTetriminos.length);
             current = theTetriminos[random][currentRotation];
             currentPosition = 4;
             draw();
@@ -249,11 +250,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     //create a next up display grid so the player knows which tetrimino is falling next
-    const bloxMini = document.querySelectorAll('.display-grid div');
-    const nextIndex = 0;
-    const nextWidth = 4; // define the size of the div for the nextTetrimino array
-
-
+    const nextBlox = document.querySelectorAll('.display-grid div');
+    const nextWidth = 4; // define the size of the display grid 
+    let nextIndex = 0;
+    console.log(nextBlox); //check that the display grid is correct
+ 
     //create the first position of the tetrimino in the display grid so the player can see whats up next
     const nextTetrimino = [
         [2, 1, nextWidth + 1, nextWidth * 2 + 1], //pTetrimino
@@ -262,17 +263,18 @@ document.addEventListener('DOMContentLoaded', () => {
         [nextWidth, nextWidth + 1, nextWidth * 2 + 1, nextWidth * 2 + 2], //zTetrimino
         [1, nextWidth, nextWidth + 1, nextWidth + 2], //tTetrimino
         [0, 1, nextWidth, nextWidth + 1], //bTetrimino
-        [1, nextWidth + 1, nextWidth * 2 + 1, nextWidth * 3 + 1], //iTetrimino
+        [1, nextWidth + 1, nextWidth * 2 + 1, nextWidth * 3 + 1]  //iTetrimino
     ];
-    console.log(nextTetrimino[0][0]); //check the output of the nextTetrimino array 
+    console.log(nextTetriminos[0][0]); // checking to ensure the tetriminos are output correctly
+
 
     //display next up tetrimino in the display grid
     function nextUp() {
-        bloxMini.forEach(blox => {
-            blox.classList.remove('tetrimino');
+        nextBlox.forEach( next => {
+            next.classList.remove('tetrimino');
         });
         nextTetrimino[nextRandom].forEach(index => {
-            bloxMini[nextIndex + index].classList.add('tetrimino');
+            next[nextIndex + index].classList.add('tetrimino');
         });
     }
 
