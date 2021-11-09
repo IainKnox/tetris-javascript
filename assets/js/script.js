@@ -16,14 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let level = 0;
     const gameMusic = document.getElementById('music');
     const soundButton = document.getElementById('play');
-    const nextGrid = document.querySelector('.display-grid');
-    // const nextCells = [ ];
-
-    // // nextUpGrid dimensions
-    // const nextWidth = 4;
-    // const nextHeight = 4;
-    // const numberOfBloxMini = (nextWidth * nextHeight);
-
+    let nextRandom = 0;
+   
     const colours = [
         'MidnightBlue',
         'Green',
@@ -108,17 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
         [width * 2, width * 2 + 1, width * 2 + 2, width * 2 + 3]
     ];
 
-    //create the first position of the tetrimino in the display grid so the player can see whats up next
-    const nextTetrimino = [
-        [2, 1, width + 1, width * 2 + 1], //pTetrimino
-        [0, 1, width + 1, width * 2 + 1], //qTetrimino
-        [width * 2, width * 2 + 1, width + 1, width + 2], //sTetrimino
-        [width, width + 1, width * 2 + 1, width * 2 + 2], //zTetrimino
-        [1, width, width + 1, width + 2], //tTetrimino
-        [0, 1, width, width + 1], //bTetrimino
-        [1, width + 1, width * 2 + 1, width * 3 + 1], //iTetrimino
-    ];
-
     const theTetriminos = [pTetrimino, qTetrimino, sTetrimino, zTetrimino, tTetrimino, bTetrimino, iTetrimino];
     console.log(theTetriminos[0][0]); // checking to ensure the tetriminos are output correctly
 
@@ -163,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
             draw();
             timerId = setInterval(moveDown, 1000);
             startButton.innerHTML = 'Started'; //change text to show gameplay is running
+            nextRandom = Math.floor(Math.random() * theTetriminos.length);
             nextUp();
         }
     });
@@ -301,13 +285,27 @@ document.addEventListener('DOMContentLoaded', () => {
     //create a next up display grid so the player knows which tetrimino is falling next
     const bloxMini = document.querySelectorAll('.display-grid div');
     const nextIndex = 0;
+    const nextWidth = 4; // define the size of the div for the nextTetrimino array
+    
+
+    //create the first position of the tetrimino in the display grid so the player can see whats up next
+    const nextTetrimino = [
+        [2, 1, nextWidth + 1, nextWidth * 2 + 1], //pTetrimino
+        [0, 1, nextWidth + 1, nextWidth * 2 + 1], //qTetrimino
+        [nextWidth * 2, nextWidth * 2 + 1, nextWidth + 1, nextWidth + 2], //sTetrimino
+        [nextWidth, nextWidth + 1, nextWidth * 2 + 1, nextWidth * 2 + 2], //zTetrimino
+        [1, nextWidth, nextWidth + 1, nextWidth + 2], //tTetrimino
+        [0, 1, nextWidth, nextWidth + 1], //bTetrimino
+        [1, nextWidth + 1, nextWidth * 2 + 1, nextWidth * 3 + 1], //iTetrimino
+    ];
+    console.log(nextTetrimino[0][0]); //check the output of the nextTetrimino array 
     
     //display next up tetrimino in the display grid
     function nextUp() {
         bloxMini.forEach(blox => {
             blox.classList.remove('tetrimino');
         });
-        nextTetrimino[random].forEach( index => {
+        nextTetrimino[nextRandom].forEach( index => {
             bloxMini[nextIndex + index].classList.add('tetrimino');
         });
     }
