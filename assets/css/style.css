@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Assistant:wght@300;400;500;600;700;800&family=Rammetto+One&display=swap');
 
 
-body {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: none;
     scroll-behavior: smooth;
-    height: 100%;
 }
 
 
@@ -60,11 +59,14 @@ body {
 }
 
 .navbar-links li:hover {
-    background-color: #5F634F;
+    background: url('../images/blue-tetrimino.png') no-repeat;
+    border-radius: 10px;
+
 }
 
 .navbar-links .active {
-    background-color: #5F634F;
+    border: 2px solid white;
+    border-radius: 10px;
 }
 
 /* create a hamburger menu for mobile displays*/
