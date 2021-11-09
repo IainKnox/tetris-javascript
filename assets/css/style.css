@@ -326,7 +326,7 @@
     height: 20px;
 }
 
-/*container for the display grid*/
+/* container for the display grid
 .name {
     margin: 2rem;
     padding: 0;
@@ -338,7 +338,7 @@
     font-size: .8rem;
     margin: 10px;
     visibility: visible;
-}
+} */
 
 /* mini grid that displays the next up tetrimino */
 .display-grid {

@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const gameMusic = document.getElementById('music');
     const soundButton = document.getElementById('play');
     let nextRandom = 0;
-   
+
     const colours = [
         'MidnightBlue',
         'Green',
@@ -169,6 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
             current = theTetriminos[random][currentRotation];
             currentPosition = 4;
             draw();
+            nextUp();
             addScore();
             gameOver();
         }
@@ -245,6 +246,69 @@ document.addEventListener('DOMContentLoaded', () => {
         draw(); //draw the new rotation 
     }
 
+
+
+    //create a next up display grid so the player knows which tetrimino is falling next
+    const bloxMini = document.querySelectorAll('.display-grid div');
+    const nextIndex = 0;
+    const nextWidth = 4; // define the size of the div for the nextTetrimino array
+
+
+    //create the first position of the tetrimino in the display grid so the player can see whats up next
+    const nextTetrimino = [
+        [2, 1, nextWidth + 1, nextWidth * 2 + 1], //pTetrimino
+        [0, 1, nextWidth + 1, nextWidth * 2 + 1], //qTetrimino
+        [nextWidth * 2, nextWidth * 2 + 1, nextWidth + 1, nextWidth + 2], //sTetrimino
+        [nextWidth, nextWidth + 1, nextWidth * 2 + 1, nextWidth * 2 + 2], //zTetrimino
+        [1, nextWidth, nextWidth + 1, nextWidth + 2], //tTetrimino
+        [0, 1, nextWidth, nextWidth + 1], //bTetrimino
+        [1, nextWidth + 1, nextWidth * 2 + 1, nextWidth * 3 + 1], //iTetrimino
+    ];
+    console.log(nextTetrimino[0][0]); //check the output of the nextTetrimino array 
+
+    //display next up tetrimino in the display grid
+    function nextUp() {
+        bloxMini.forEach(blox => {
+            blox.classList.remove('tetrimino');
+        });
+        nextTetrimino[nextRandom].forEach(index => {
+            bloxMini[nextIndex + index].classList.add('tetrimino');
+        });
+    }
+
+    // function createNextUpGrid() {
+    //     for (let i = 0; i <= numberOfBloxMini; i++) {
+    //         const cell = document.createElement('div');
+    //         nextCells.push(cell);
+    //         // cell.innerHTML = i     // label the cells
+    //         nextGrid.appendChild(cell);
+    //     }
+    // }
+
+
+
+    //create a high score function to store the players highest scores locally
+    const highestScoreResults = document.getElementsByClassName('highest-score');
+
+    let highestScore = window.localStorage.getItem('highScore');
+    // let playerScore = 0;
+    // let gameLine = 0;
+    // let playerLevel = 0;
+
+    function updateScores() {
+        playerCurrentScore.innerHTML = playerScore;
+        playerCurrentLevel.innerHTML = playerLevel;
+        highestScoreResults.innerHTML = highScore === null ? 0 : highScore;
+    }
+
+    //storing scores locally
+    function updateHighScores() {
+        if (playerScore > highScore) {
+            highScore = playerScore;
+        }
+    }
+    document.addEventListener(updateScores());
+
     //create function to add score to game for clearing lines
     function addScore() {
         for (let i = 0; i < 199; i += width) { // for loop to iterate through the entire grid
@@ -278,72 +342,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (current.some(index => blox[currentPosition + index].classList.contains('taken'))) { // check to see if a taken shape is at the original index position 
             clearInterval(timerId); // stop the moveDown() function
             startButton.innerHTML = 'Game Over';
+            startButton.style.backgroundColor = 'red';
+            startButton.style.color = 'white';
             startButton.disabled = true; //disable the start button so that the game cannot continue
         }
     }
-
-    //create a next up display grid so the player knows which tetrimino is falling next
-    const bloxMini = document.querySelectorAll('.display-grid div');
-    const nextIndex = 0;
-    const nextWidth = 4; // define the size of the div for the nextTetrimino array
-    
-
-    //create the first position of the tetrimino in the display grid so the player can see whats up next
-    const nextTetrimino = [
-        [2, 1, nextWidth + 1, nextWidth * 2 + 1], //pTetrimino
-        [0, 1, nextWidth + 1, nextWidth * 2 + 1], //qTetrimino
-        [nextWidth * 2, nextWidth * 2 + 1, nextWidth + 1, nextWidth + 2], //sTetrimino
-        [nextWidth, nextWidth + 1, nextWidth * 2 + 1, nextWidth * 2 + 2], //zTetrimino
-        [1, nextWidth, nextWidth + 1, nextWidth + 2], //tTetrimino
-        [0, 1, nextWidth, nextWidth + 1], //bTetrimino
-        [1, nextWidth + 1, nextWidth * 2 + 1, nextWidth * 3 + 1], //iTetrimino
-    ];
-    console.log(nextTetrimino[0][0]); //check the output of the nextTetrimino array 
-    
-    //display next up tetrimino in the display grid
-    function nextUp() {
-        bloxMini.forEach(blox => {
-            blox.classList.remove('tetrimino');
-        });
-        nextTetrimino[nextRandom].forEach( index => {
-            bloxMini[nextIndex + index].classList.add('tetrimino');
-        });
-    }
-
-    // function createNextUpGrid() {
-    //     for (let i = 0; i <= numberOfBloxMini; i++) {
-    //         const cell = document.createElement('div');
-    //         nextCells.push(cell);
-    //         // cell.innerHTML = i     // label the cells
-    //         nextGrid.appendChild(cell);
-    //     }
-    // }
-   
-
-
-    //create a high score function to store the players highest scores locally
-    const highestScoreResults = document.getElementsByClassName('highest-score');
-
-    let highestScore = window.localStorage.getItem('highScore');
-    // let playerScore = 0;
-    // let gameLine = 0;
-    // let playerLevel = 0;
-
-    function updateScores() {
-        playerCurrentScore.innerHTML = playerScore;
-        playerCurrentLevel.innerHTML = playerLevel;
-        highestScoreResults.innerHTML = highScore === null ? 0 : highScore;
-    }
-
-    //storing scores locally
-    function updateHighScores() {
-        if (playerScore > highScore) {
-            highScore = playerScore;
-        }
-    }
-    document.addEventListener(updateScores());
-
-
 
 
 
