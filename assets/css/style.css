@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Assistant:wght@300;400;500;600;700;800&family=Rammetto+One&display=swap');
 
 
-* {
+body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: none;
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 
@@ -120,6 +121,14 @@
     .navbar-links.active {
         display: flex;
     }
+}
+
+.main-bg {
+    background: url("../images/orange-tetrimino.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .title {
@@ -354,8 +363,7 @@
 
 /* footer section */
 footer {
-    min-height: 8rem;
-
+    height: 150px;
 }
 
 footer p {
@@ -371,8 +379,8 @@ footer p {
 
 }
 
-.social-networks>li {
-    display: inline-block;
+.social-networks > li {
+    display: inline;
 }
 
 .social-networks i {
@@ -385,7 +393,7 @@ footer p {
 
 /* an arrow fixed to scroll with the screen, so that a user can quickly return to the top of the page */
 .arrow-top {
-    position: fixed;
+    position: fixed; 
     right: .5rem;
     bottom: .25rem;
     font-family: 'Rammetto One', sans-serif;
