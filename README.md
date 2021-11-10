@@ -61,18 +61,20 @@ I identified 2 groups of user for this site,
     * The instructions page outlines a brief history of the game, with a link to its corresponding wikipedia article. 
     * The player instructions are listed in a clear and concise manner beneath the history.
     * The is a call to action button below the instructions inviting the player to start a game,
-    * ![instructions Page](assets/images/readme-imgs/landing-page.jpg)
+    * ![instructions Page](assets/images/readme-imgs/normal-nav.jpg)
 * Navigation Buttons
     * The navigation bar was removed from the landing page so as not hamper the fun aspect of the site, and replaced rather with a series of call to action buttons, to familiarize the user with the point and click aspect of the game.
-    * ![Nav Buttons](assets/images/readme-imgs/landing-page.jpg)
+    * ![Nav Buttons](assets/images/readme-imgs/nav-buttons.jpg)
 * Navigation Bar
     * The traditional navigation bar comes into play across the **Instructions**, **Scores** and **Tetris** gameplay pages. 
     * One of the key factors with the site is responsive design, and with the navbar this is carried through in the way in which it behaves on smaller screens, with it taking up 100% width and stacking for easier readability and an improved user experience that doesn't detract the focus away from the site.
     * With mobile in mind, a hamburger menu with a toggle dropdown replaces the standard bar so as not to monopolize screen space.
-    * ![Nav Hamburger](assets/images/readme-imgs/landing-page.jpg)
+    * ![Nav Hamburger Closed](assets/images/readme-imgs/hamburger-nav1.jpg)
+    * ![Nav Hamburger Expanded](assets/images/readme-imgs/hamburger-nav2.jpg)
 * ### Game Page
-    * The game page is broken down into 3 panels. 
-    * The first panel contains the Player information is terms of **Score, Line Cleared and Level**, as well as the button to active the game theme music,which is in an off state, **Music Off**.
+    * The game page is broken down into 3 panels.
+    *  ![Game Page](assets/images/readme-imgs/game-play1.png)
+       * The first panel contains the Player information is terms of **Score, Line Cleared and Level**, as well as the button to active the game theme music,which is in an off state, **Music Off**.
     * The second panel contains the **game grid** and is central to the screen.
     * The third panel contains the controls - **Left, Rotate, Right & Down** - for point and click, and the **Start/Pause** button.
 * Game Grid
@@ -81,15 +83,15 @@ I identified 2 groups of user for this site,
     *  As mentioned, the player is able to either directly use the **arrow** keys or point and click **buttons**. On mobile devices, the buttons are active to being touched.
 * Scoring Panel 
     * The scoring panel contains player information in a descending order, being with the **Score** tallied at 15 points for every line cleared. **Lines** for the number of lines that are cleared. And finally **Level** . For every successful 5 lines cleared, 1 level is awarded with a bonus 100 points. The traditional Tetris rules offer a lot more variety in terms of scoring, but due to time constraints, I opted for a simpler scoring system.
-    * ![Game Page](assets/images/readme-imgs/landing-page.jpg)
+    * ![Game Play](assets/images/readme-imgs/game-play.png)
 * ### Scores Page
     * The player can access the scores page either through direct navigation, or by completing a game. When a game ends, the player is taken automatically to the scores page and asked to submit their name. This data is store locally on their machine. Through a couple of call to actions, the player can either opt to play another game, which resets the game variables to 0 or navigate back to the home screen.
-    * ![Scores Page](assets/images/readme-imgs/landing-page.jpg)
+    * ![Scores Page](assets/images/readme-imgs/scores.html.jpg)
 * ### Footer
     * The footer contains not only social media links, by references to other Tetris sites.
     * The player can engage with the broader Tetris community via facebook or twitter, or find out more information via the official Tetris website.
     * All links open new browser windows.
-    * ![Footer](assets/images/readme-imgs/landing-page.jpg)
+    * ![Footer](assets/images/readme-imgs/footer.png)
 * External Links
     * [Facebook](https://www.facebook.com/Tetris/)
     * [Twitter](https://twitter.com/Tetris_Official)
