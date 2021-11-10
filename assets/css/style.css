@@ -125,6 +125,7 @@
     }
 }
 
+/* create background image for the landing page */
 .main-bg {
     background: url("../images/orange-tetrimino.png");
     height: 100vh;
@@ -133,6 +134,7 @@
     background-size: cover;
 }
 
+/* universal styling for the headings across all pages */
 .title {
     font-family: "Rammetto One", sans-serif;
     margin: 20px auto;
@@ -171,7 +173,8 @@
 /* main panel for the game grid and start button*/
 .box {
     height: 460px;
-    border: 2px solid red;
+    border: none;
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
     position: relative;
     border-radius: 5px;
 
@@ -230,12 +233,11 @@
     text-decoration: none;
 }
 
+/* div to arrange the control buttons */
 .controls {
    text-align: center;
    margin:  0 auto;
    /* border:  1px dashed blue; */
-  
-
 }
 
 /* styling for the control keys left, rotate, right and down */
@@ -296,19 +298,10 @@
     cursor: pointer;
 }
 
-.control-btn[disabled]:hover {
-    cursor: not-allowed;
-    transform: none;
-}
-
 .music {
     padding: 1rem;
     margin: .5rem auto;
     justify-content: space-between;
-}
-
-.grid-container {
-    display: flex;
 }
 
 /* the grid created as the play area for housing the tetriminos */
@@ -321,42 +314,9 @@
     flex-wrap: wrap;
 }
 
-
 .grid div {
     width: 20px;
     height: 20px;
-}
-
-/* container for the display grid
-.name {
-    margin: 2rem;
-    padding: 0;
-    text-align: center;
-}
-
-.name h2 {
-    font-family: 'Press Start 2P', sans-serif;
-    font-size: .8rem;
-    margin: 10px;
-    visibility: visible;
-} */
-
-/* mini grid that displays the next up tetrimino */
-.display-grid {
-    width: 80px;
-    height: 80px;
-    border-radius: 5px;
-    background-color: lightgray;
-    display: flex;
-    flex-wrap: wrap;
-    border:  2px solid violet;
-    margin-left: 10px;
-}
-
-.display-grid div {
-    width: 20px;
-    height: 20px;
-    /* border: 1px solid black;; */
 }
 
 /* fallback color for tetrimino to display within the grid */
