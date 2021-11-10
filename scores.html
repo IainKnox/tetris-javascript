@@ -17,7 +17,7 @@
         <!-- navigation elements for User to access instruction, rules and scores-->
         <nav class="navbar">
             <div class="brand-logo">
-                <a href="#" aria-label="returns the user to the top of the home page">
+                <a href="index.html" aria-label="returns the user to the top of the home page">
                     <h2>Tetris JS</h2>
                 </a>
             </div>
@@ -42,7 +42,7 @@
     <section class="scoring">
         <div class="high-scores-wrapper">
             <div class="high-scores">
-                <h1 class="title">0</h1>
+                <h1 class="title" id="finalScore">0</h1>
                 <form>
                     <input 
                     type="text" 
@@ -53,8 +53,7 @@
                     type="submit" 
                     class="btn" 
                     id="save-score" 
-                    onclick="saveScore(event)" 
-                    disabled
+                    onclick="saveScore(event)"
                     >Save</button>
                 </form>
                 <a href="tetris.html" class="btn">Play Again</a>

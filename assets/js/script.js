@@ -192,12 +192,16 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault(); // prevents default screen movement when pressing the arrow keys
 
         if (event.keyCode === 37) {
+            event.preventDefault();
             moveLeft();
         } else if (event.keyCode === 39) {
+            event.preventDefault();
             moveRight();
         } else if (event.keyCode === 40) {
+            event.preventDefault();
             moveDown();
         } else if (event.keyCode === 38) {
+            event.preventDefault();
             turnShape();
         }
     }
@@ -265,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
         [0, 1, nextWidth, nextWidth + 1], //bTetrimino
         [1, nextWidth + 1, nextWidth * 2 + 1, nextWidth * 3 + 1]  //iTetrimino
     ];
-    console.log(nextTetriminos[0][0]); // checking to ensure the tetriminos are output correctly
+    // console.log(nextTetriminos[0][0]); // checking to ensure the tetriminos are output correctly
 
 
     //display next up tetrimino in the display grid
@@ -290,19 +294,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     //create a high score function to store the players highest scores locally
-   
     const playerName = document.getElementById('playerName');
-    const saveScoreButton = document.querySelector('#save-score');
-
+    const saveScoreBtn = document.getElementById('save-score');
+    const finalScore = document.getElementById('finalScore');
+    const mostRecentScore = localStorage.getItem('mostRecentScore');
+    const highScores = JSON.parse(localStorage.getItem('highScores')) || [ ];  
+    finalScore.innerText = mostRecentScore;
+    
     playerName.addEventListener('keyup', () => {
-             saveScoreButton.disabled = !playerName.value;
-
+        saveScoreBtn.disabled = !playerName.value;
     });
+    
+    saveHighScore = (e) => {
+        e.preventDefault();
+    
+        const score = {
+            score: mostRecentScore,
+            name: playerName.value,
+        };
+        highScores.push(score);
+        highScores.sort((a, b) => b.score - a.score);
+        highScores.splice(3);
+    
+        localStorage.setItem('highScores', JSON.stringify(highScores));
+        window.location.assign('/');
+    };
 
-    saveScore = event => {
-        event.preventDefault();
-    }
-
+    
 
 
     // const highestScoreResults = document.getElementsByClassName('highest-score');
@@ -362,9 +380,10 @@ document.addEventListener('DOMContentLoaded', () => {
             startButton.style.backgroundColor = 'red';
             startButton.style.color = 'white';
             startButton.disabled = true; //disable the start button so that the game cannot continue
+            localStorage.setItem("mostRecentScore", score);
+            //redirect player to the scores page
+            return window.location.assign("/scores.html");
         }
     }
-
-
 
 });
