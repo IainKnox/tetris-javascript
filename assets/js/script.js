@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+    
     const toggle = document.getElementsByClassName('toggle-btn')[0];
     const navbar = document.getElementsByClassName('navbar-links')[0];
     const grid = document.querySelector('.grid');
     let blox = Array.from(document.querySelectorAll('.grid div'));
     const width = 10;
-    console.log(grid);
     console.log(blox); //checking to make sure the array is correct
     const startButton = document.getElementById('start-button');
     let timerId;
@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'Brown',
         'Magenta'
     ];
-
 
     // create a function that toggles the hamburger navigation menu
     toggle.addEventListener('click', () => {
@@ -132,9 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    //add interval to move the tetrimino down the grid
-    //this will be used to introduce difficulty by speeding the drop rate up
-    //timerId = setInterval(moveDown, 1000);
 
     // start button acts as start/pause game button
     startButton.addEventListener('click', () => {
@@ -147,7 +143,6 @@ document.addEventListener('DOMContentLoaded', () => {
             timerId = setInterval(moveDown, 1000);
             startButton.innerHTML = 'Started'; //change text to show gameplay is running
             nextRandom = Math.floor(Math.random() * theTetriminos.length);
-            nextUp();
         }
     });
 
@@ -170,7 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
             current = theTetriminos[random][currentRotation];
             currentPosition = 4;
             draw();
-            nextUp();
             addScore();
             gameOver();
         }
@@ -192,16 +186,12 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault(); // prevents default screen movement when pressing the arrow keys
 
         if (event.keyCode === 37) {
-            event.preventDefault();
             moveLeft();
         } else if (event.keyCode === 39) {
-            event.preventDefault();
             moveRight();
         } else if (event.keyCode === 40) {
-            event.preventDefault();
             moveDown();
         } else if (event.keyCode === 38) {
-            event.preventDefault();
             turnShape();
         }
     }
@@ -240,10 +230,10 @@ document.addEventListener('DOMContentLoaded', () => {
         draw();
     }
 
-    //create a function to turn the tetrimino around so as to get it to fill gaps and complete lines
+    //create a function to turn the tetrimino around by a 90 degree rotation
     function turnShape() {
         undraw(); //undraw the current tetrimino 
-        currentRotation++; //increment the rotation by one
+        currentRotation++; //increment the rotation by 1 turn
         if (currentRotation === current.length) {
             currentRotation = 0; //set new rotation 
         }
@@ -251,63 +241,59 @@ document.addEventListener('DOMContentLoaded', () => {
         draw(); //draw the new rotation 
     }
 
+    /* limited coding experience resulted in this bugged code.           
+                * I tried coding a display grid to show the upNext tetrimino for the player, but failed to get it to display 
+                * correctly. Due to limited knowledge and experience with JS, I opted to comment this 
+                * block of code out and return to it at a later date, as a future update, when I have
+                * the sufficient skill level 
+                * ***************************************************************************************************************
+                //create a next up display grid so the player knows which tetrimino is falling next
+                const nextBlox = document.querySelectorAll('.display-grid div');
+                const nextWidth = 4; // define the size of the display grid 
+                let nextIndex = 0;
+                console.log(nextBlox); //check that the display grid is correct
+            
+                //create the first position of the tetrimino in the display grid so the player can see whats up next
+                const nextTetrimino = [ 
+                    [2, 1, nextWidth + 1, nextWidth * 2 + 1], //pTetrimino
+                    [0, 1, nextWidth + 1, nextWidth * 2 + 1], //qTetrimino
+                    [nextWidth * 2, nextWidth * 2 + 1, nextWidth + 1, nextWidth + 2], //sTetrimino
+                    [nextWidth, nextWidth + 1, nextWidth * 2 + 1, nextWidth * 2 + 2], //zTetrimino
+                    [1, nextWidth, nextWidth + 1, nextWidth + 2], //tTetrimino
+                    [0, 1, nextWidth, nextWidth + 1], //bTetrimino
+                    [1, nextWidth + 1, nextWidth * 2 + 1, nextWidth * 3 + 1]  //iTetrimino
+                ]; 
 
+                //display next up tetrimino in the display grid
+                function nextUp() {
+                    nextBlox.forEach( next => {
+                        next.classList.remove('tetrimino');
+                    });
+                    nextTetrimino[nextRandom].forEach(index => {
+                        nextBlox[nextIndex + index].classList.add('tetrimino');
+                    });
+                }
+    */
 
-    //create a next up display grid so the player knows which tetrimino is falling next
-    const nextBlox = document.querySelectorAll('.display-grid div');
-    const nextWidth = 4; // define the size of the display grid 
-    let nextIndex = 0;
-    console.log(nextBlox); //check that the display grid is correct
- 
-    //create the first position of the tetrimino in the display grid so the player can see whats up next
-    const nextTetrimino = [ 
-        [2, 1, nextWidth + 1, nextWidth * 2 + 1], //pTetrimino
-        [0, 1, nextWidth + 1, nextWidth * 2 + 1], //qTetrimino
-        [nextWidth * 2, nextWidth * 2 + 1, nextWidth + 1, nextWidth + 2], //sTetrimino
-        [nextWidth, nextWidth + 1, nextWidth * 2 + 1, nextWidth * 2 + 2], //zTetrimino
-        [1, nextWidth, nextWidth + 1, nextWidth + 2], //tTetrimino
-        [0, 1, nextWidth, nextWidth + 1], //bTetrimino
-        [1, nextWidth + 1, nextWidth * 2 + 1, nextWidth * 3 + 1]  //iTetrimino
-    ];
-    // console.log(nextTetriminos[0][0]); // checking to ensure the tetriminos are output correctly
-
-
-    //display next up tetrimino in the display grid
-    function nextUp() {
-        nextBlox.forEach( next => {
-            next.classList.remove('tetrimino');
-        });
-        nextTetrimino[nextRandom].forEach(index => {
-            nextBlox[nextIndex + index].classList.add('tetrimino');
-        });
-    }
-
-    // function createNextUpGrid() {
-    //     for (let i = 0; i <= numberOfBloxMini; i++) {
-    //         const cell = document.createElement('div');
-    //         nextCells.push(cell);
-    //         // cell.innerHTML = i     // label the cells
-    //         nextGrid.appendChild(cell);
-    //     }
-    // }
-
-
-
+    
+    /** I tried a variety of methods to create a function whereby the players score 
+    *  would be taken from the gameOver() and passed to a finalScore that could be stored locally 
+   *************************************************************************************************************/
     //create a high score function to store the players highest scores locally
     const playerName = document.getElementById('playerName');
     const saveScoreBtn = document.getElementById('save-score');
     const finalScore = document.getElementById('finalScore');
     const mostRecentScore = localStorage.getItem('mostRecentScore');
-    const highScores = JSON.parse(localStorage.getItem('highScores')) || [ ];  
+    const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
     finalScore.innerText = mostRecentScore;
-    
+
     playerName.addEventListener('keyup', () => {
-        saveScoreBtn.disabled = !playerName.value;
+        saveScoreBtn.disabled = !playerName.value; //save button should be disabled until the player inputs their name 
     });
-    
-    saveHighScore = (e) => {
+
+    saveScore = (e) => {
         e.preventDefault();
-    
+
         const score = {
             score: mostRecentScore,
             name: playerName.value,
@@ -315,34 +301,10 @@ document.addEventListener('DOMContentLoaded', () => {
         highScores.push(score);
         highScores.sort((a, b) => b.score - a.score);
         highScores.splice(3);
-    
-        localStorage.setItem('highScores', JSON.stringify(highScores));
-        window.location.assign('/');
+
+        localStorage.setItem('highScores', JSON.stringify(highScores));  //stores the players score in the localStorage
+        window.location.assign( ' / '); 
     };
-
-    
-
-
-    // const highestScoreResults = document.getElementsByClassName('highest-score');
-
-    // let highestScore = window.localStorage.getItem('highScore');
-    // // let playerScore = 0;
-    // // let gameLine = 0;
-    // // let playerLevel = 0;
-
-    // function updateScores() {
-    //     playerCurrentScore.innerHTML = playerScore;
-    //     playerCurrentLevel.innerHTML = playerLevel;
-    //     highestScoreResults.innerHTML = highScore === null ? 0 : highScore;
-    // }
-
-    // //storing scores locally
-    // function updateHighScores() {
-    //     if (playerScore > highScore) {
-    //         highScore = playerScore;
-    //     }
-    // }
-    // document.addEventListener(updateScores());
 
     //create function to add score to game for clearing lines
     function addScore() {
@@ -382,7 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
             startButton.disabled = true; //disable the start button so that the game cannot continue
             localStorage.setItem("mostRecentScore", score);
             //redirect player to the scores page
-            return window.location.assign("/scores.html");
+            return window.location.assign("/scores.html"); //player should be able to save score locally, navigate to other pages in the site
         }
     }
 
