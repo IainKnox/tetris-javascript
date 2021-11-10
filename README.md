@@ -30,6 +30,8 @@ I identified 2 groups of user for this site,
   * Completed lines should be removed from the grid, and the users score should be incremented for every successful line cleared. Multiple clears should result in the user advancing in level.
   information regarding the players score, lines cleared and level achieved should feedback to the player in real time.
   * The player should be able to play the game with the use of arrow keys, or with a mouse by clicking on dedicated buttons.
+  * The player can choose whether or not to have game music playing to add to their experience.
+  * The score should increase with every successful line cleared, and the level should increase with successive line clears, resulting in bonus points be added to the score.
 
 
 <!-- still to add -->
