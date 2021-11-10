@@ -42,6 +42,13 @@ I identified 2 groups of user for this site,
   * The tetriminos should be able to move left, right and down and rotate by 90 degrees. They should not be able to move beyond the grid walls and should freeze when hitting the floor or other tetriminos.
   * The player should be able to pause the game.
   * If all the tetriminos make it to the grid ceiling, the game should end.
+  
+    * Rather than create traditional wireframes for this project, I opted for a pen and paper approach, as it made it easier to visualize and iterate through the various functions and deisgn elements.
+        * ![Initial Scoping Meeting](assets/images/readme-imgs/wireframe-artwork1.png)
+        * ![Initial Scoping Meeting](assets/images/readme-imgs/wireframe-artwork2.png)
+        * ![Initial Scoping Meeting](assets/images/readme-imgs/wireframe-artwork3.png)
+        * the Tetriminos were drawn up with the aid of an excel spreadsheet to better understand the various iterations each shape would take in the array.
+        * ![Tetrimino Grid](assets/images/readme-imgs/tetrimino-grid.png)
 <hr>
 <p>&nbsp</p>
 
@@ -74,12 +81,15 @@ I identified 2 groups of user for this site,
     *  As mentioned, the player is able to either directly use the **arrow** keys or point and click **buttons**. On mobile devices, the buttons are active to being touched.
 * Scoring Panel 
     * The scoring panel contains player information in a descending order, being with the **Score** tallied at 15 points for every line cleared. **Lines** for the number of lines that are cleared. And finally **Level** . For every successful 5 lines cleared, 1 level is awarded with a bonus 100 points. The traditional Tetris rules offer a lot more variety in terms of scoring, but due to time constraints, I opted for a simpler scoring system.
+    * ![Game Page](assets/images/readme-imgs/landing-page.jpg)
 * ### Scores Page
     * The player can access the scores page either through direct navigation, or by completing a game. When a game ends, the player is taken automatically to the scores page and asked to submit their name. This data is store locally on their machine. Through a couple of call to actions, the player can either opt to play another game, which resets the game variables to 0 or navigate back to the home screen.
+    * ![Scores Page](assets/images/readme-imgs/landing-page.jpg)
 * ### Footer
     * The footer contains not only social media links, by references to other Tetris sites.
     * The player can engage with the broader Tetris community via facebook or twitter, or find out more information via the official Tetris website.
     * All links open new browser windows.
+    * ![Footer](assets/images/readme-imgs/landing-page.jpg)
 * External Links
     * [Facebook](https://www.facebook.com/Tetris/)
     * [Twitter](https://twitter.com/Tetris_Official)
@@ -165,6 +175,12 @@ The site was tested with the amireponsive tool to determine how well it would lo
 
 ## Deployment
 I have hosted my site on github pages, it can be accessed from the following url:
+[Tetris Javascript](https://iainknox.github.io/tetris-javascript/) 
+
+The deployment process was done via GitHub Pages. From the Github Pages tab, I followed these steps to ensure the site was live:
+ * Ensured that the **main** branch was selected as the **source**  from which it was built.
+ *  I then selected **save** at which point Github alerted me that the site was ready to be published at the provided address(linked above).
+ * When clicking on the link, a new browser window was opened and the live site was made available.
 <!-- need to add more information to this area and explain the process in more detail -->
 
 <hr>
@@ -172,9 +188,11 @@ I have hosted my site on github pages, it can be accessed from the following url
  
 
 ## Credits
-A big shout out to my mentor, Cans for guiding me through the process and offering assistance when necessary to point me in the right direction.
+A big shout out to my mentor, Cans Sucullu for guiding me through the process and helping me thrash out the scope. Always quick to point me in the right direction, offering assistance when necessary.
 
 The community on Slack, the help and feedback a student is able to receive from the peers and alumni is a really invaluable tool to have.
+
+Both James Quick's and Michael Karen's various articles and tutorials on **Local Storage** and creating a **high scores list**  [Learn Build Teach](https://discord.com/invite/vM2bagU) and Tetris builds [Learning Modern Javascript with Tetris](https://michael-karen.medium.com/learning-modern-javascript-with-tetris-92d532bcd057)
 
 <hr>
 <p>&nbsp</p>
@@ -194,7 +212,7 @@ The fonts were acquired via Google Fonts
 <p>&nbsp</p>
 
 ## Media
-The images used throughout the site were sourced from an open source gallery in Pexels. 
+The images used throughout the site were sourced from an open source gallery in Pixabay 
 
 Icons used throughout the site for social media and card graphics were sourced from the free kit made available on Font Awesome
 
