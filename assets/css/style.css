@@ -143,6 +143,7 @@
    
     font-size: 2.5rem;
     text-transform: uppercase;
+    color: #1f0322;
 }
 
 .title h2::after {
@@ -199,16 +200,11 @@
     visibility: hidden;
 }
 
+/* High Scores */
 .score {
+    font-family: "Rammetto One", sans-serif;
     text-align: center;
     text-transform: uppercase;
-
-}
-
-.score-card table {
-    font-family: "Assistant", sans-serif;
-    width: 100%;
-    text-align: center;
 
 }
 
@@ -229,7 +225,7 @@
 
     background-color: #03011e;
     border: 2px solid #847655;
-    color: #847655;
+    color: #fc6e22;
 
     padding: 1rem;
     margin: .5rem auto;
@@ -243,7 +239,7 @@
 .controls {
    text-align: center;
    margin:  0 auto;
-   border:  1px dashed blue;
+   /* border:  1px dashed blue; */
   
 
 }
@@ -258,7 +254,7 @@
     display: inline-block;
     background-color: #03011e;
     border: 2px solid #847655;
-    color: #847655;
+    color: #fc6e22;
 
     padding: .5rem;
     margin: .25rem 1rem;
@@ -277,7 +273,7 @@
 
     background-color: #03011e;
     border: 2px solid #847655;
-    color: #847655;
+    color: #fc6e22;
 
     padding: 1rem;
     margin: .5rem auto;
@@ -294,10 +290,21 @@
     cursor: pointer;
 }
 
+/* remove btn functionality during gameOver() and score form submission till requirements are met */
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    transform: none;
+}
+
 .control-btn:hover {
     background: #847655;
     color: #fff;
     cursor: pointer;
+}
+
+.control-btn[disabled]:hover {
+    cursor: not-allowed;
+    transform: none;
 }
 
 .music {
