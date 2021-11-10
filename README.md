@@ -130,17 +130,17 @@ My first round of testing was functionality testing in which I performed the fol
 
 ### Validation results - W3C Validator
 All pages where tested through the W3C html validator and passed. Links to the results for each page are as follows;
-* index.html Validation
-* instructions.html Validation
-* tetris.html Validation
-* scores.html Validation
+* index.html Validation  [Index HTML Validator](assets/images/readme-imgs/index-html-validation.jpg)
+* instructions.html Validation  [Instructions HTML Validator](assets/images/readme-imgs/instructions-html-validation.jpg)
+* tetris.html Validation   [Tetris HTML Validator](assets/images/readme-imgs/tetris-html.validation.jpg)
+* scores.html Validation  [Scores HTML Validator](assets/images/readme-imgs/scores-html-validation.png)
 
 ### Validating results -  JSHint Validator
 All javascript was passed through the JSHint validator with ES6 included [JS Validator](assets/images/readme-imgs/jsHint-validator.png)
 
 ### Validation results - CSS Validator
 All pages where tested through the W3C css validator and passed. Links to the results for each page are as follows;
-tetris-javascript Validation
+tetris-javascript Validation  [CSS Validator](assets/images/readme-imgs/css-validation.jpg)
 Site fluidity
 To test the flow of the site I forwarded it on to my spouse and work colleagues. Grammarly was also used to test the various pages for any spelling and grammar errors.
 
@@ -148,9 +148,9 @@ To test the flow of the site I forwarded it on to my spouse and work colleagues.
 I tested the compatibility of my site first by by emulating different devices using the Dev tools in Chrome as well as using the variable responsive setting to check at different breakpoints.
 
 The various tests that were run were:
-* checking to see if the all images and cards scaled and maintained aspect ratio as the display shrunk and grew.
-* checking to see if responsive elements within my layout changed at the correct breakpoints, such as the navbar and cards.
-* checking to see if my media queries behaved as expected with regards to cards displaying in columns or rows, navigation.
+* checking to see if the all images and buttons and panels scaled and maintained aspect ratio as the display shrunk and grew.
+* checking to see if responsive elements within my layout changed at the correct breakpoints, such as the navbar and toggle.
+* checking to see if my media queries behaved as expected with regards to navigation toggle displaying in rows when in mobile navigation.
 * I then tested it on different browsers. I have tested in Chrome, Firefox and Edge. Once I was sure my project worked on windows 10, I then opened it on my phone running Safari on IOS 15.
 <hr>
 <p>&nbsp</p>
@@ -195,7 +195,9 @@ The deployment process was done via GitHub Pages. From the Github Pages tab, I f
  
 
 ## Credits
-A big shout out to my mentor, Cans Sucullu for guiding me through the process and helping me thrash out the scope. Always quick to point me in the right direction, offering assistance when necessary.
+A big shout out to my mentor, **Cans Sucullu** for guiding me through the process and helping me thrash out the scope. Always quick to point me in the right direction, offering assistance when necessary.
+
+I was also fortunate to have be aided by mentor, **Reuben Ferrante** who provided countless points of reference.
 
 The community on Slack, the help and feedback a student is able to receive from the peers and alumni is a really invaluable tool to have.
 
@@ -211,9 +213,10 @@ Much of the information regarding Tetris, its styles and origins where taken fro
 
 Link to the Tetris wiki, full of inspiration [Tetris Wiki](https://en.wikipedia.org/wiki/Tetris)
 
-The color was inspired by the old school bright neon colours and running various searches through google with the keyword Tetris and then further refined with the help of sites such as Color Space and Coolors
+* The color was inspired by the old school bright neon colours and running various searches through google with the keyword Tetris and then further refined with the help of sites such as Color Space and Coolors
 
-The fonts were acquired via Google Fonts
+
+* The fonts were acquired via [Google Fonts](https://fonts.google.com/)
 
  <hr>
 <p>&nbsp</p>
