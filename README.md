@@ -62,10 +62,10 @@ I identified 2 groups of user for this site,
     * The player instructions are listed in a clear and concise manner beneath the history.
     * The is a call to action button below the instructions inviting the player to start a game,
     * ![instructions Page](assets/images/readme-imgs/normal-nav.jpg)
-* Navigation Buttons
+* ### Navigation Buttons
     * The navigation bar was removed from the landing page so as not hamper the fun aspect of the site, and replaced rather with a series of call to action buttons, to familiarize the user with the point and click aspect of the game.
     * ![Nav Buttons](assets/images/readme-imgs/nav-buttons.jpg)
-* Navigation Bar
+* ### Navigation Bar
     * The traditional navigation bar comes into play across the **Instructions**, **Scores** and **Tetris** gameplay pages. 
     * One of the key factors with the site is responsive design, and with the navbar this is carried through in the way in which it behaves on smaller screens, with it taking up 100% width and stacking for easier readability and an improved user experience that doesn't detract the focus away from the site.
     * With mobile in mind, a hamburger menu with a toggle dropdown replaces the standard bar so as not to monopolize screen space.
@@ -77,11 +77,11 @@ I identified 2 groups of user for this site,
        * The first panel contains the Player information is terms of **Score, Line Cleared and Level**, as well as the button to active the game theme music,which is in an off state, **Music Off**.
     * The second panel contains the **game grid** and is central to the screen.
     * The third panel contains the controls - **Left, Rotate, Right & Down** - for point and click, and the **Start/Pause** button.
-* Game Grid
+* ### Game Grid
     * The game grid was hard coded into an array and is made up of 200 divs.
-* Controls
+* ### Controls
     *  As mentioned, the player is able to either directly use the **arrow** keys or point and click **buttons**. On mobile devices, the buttons are active to being touched.
-* Scoring Panel 
+* ### Scoring Panel 
     * The scoring panel contains player information in a descending order, being with the **Score** tallied at 15 points for every line cleared. **Lines** for the number of lines that are cleared. And finally **Level** . For every successful 5 lines cleared, 1 level is awarded with a bonus 100 points. The traditional Tetris rules offer a lot more variety in terms of scoring, but due to time constraints, I opted for a simpler scoring system.
     * ![Game Play](assets/images/readme-imgs/game-play.png)
 * ### Scores Page
@@ -92,7 +92,7 @@ I identified 2 groups of user for this site,
     * The player can engage with the broader Tetris community via facebook or twitter, or find out more information via the official Tetris website.
     * All links open new browser windows.
     * ![Footer](assets/images/readme-imgs/footer.png)
-* External Links
+* ### External Links
     * [Facebook](https://www.facebook.com/Tetris/)
     * [Twitter](https://twitter.com/Tetris_Official)
     * [Tetris](https://tetris.com/)
@@ -130,12 +130,13 @@ My first round of testing was functionality testing in which I performed the fol
 
 ### Validation results - W3C Validator
 All pages where tested through the W3C html validator and passed. Links to the results for each page are as follows;
-index.html Validation
-instructions.html Validation
-tetris.html Validation
-scores.html Validation
+* index.html Validation
+* instructions.html Validation
+* tetris.html Validation
+* scores.html Validation
 
-### Validating the CSS in the site
+### Validating results -  JSHint Validator
+All javascript was passed through the JSHint validator with ES6 included [JS Validator](assets/images/readme-imgs/jsHint-validator.png)
 
 ### Validation results - CSS Validator
 All pages where tested through the W3C css validator and passed. Links to the results for each page are as follows;
@@ -159,19 +160,22 @@ My second round of testing involved accessibility and readability, checking the 
 
 ### Contrast Checker
 The first port of call with regards to contrast was Eightshapes Contrast Grid so as to best understand the contrast between all the elements of the site, ensure fonts were readable against backgrounds and that font sizing was consistent to maintain accessibility.
-The resulting output was the following Eightshapes - Tetris Javascript
+
 The site was tested using A11y colour contrast accessibility checker Contrast Checker to ensure maximum readability and accessibility.
 ### A11y - 
 The site was tested using WAVE, web accessibility evaluation tool Webaim to ensure accessibility criteria were met.
+ * Contrast Checker Scores [A11y Contrast Score](assets/images/readme-imgs/a11y-contrast-checker.jpg)
 ### Lighthouse Scores
 The site was tested for both mobile and desktop scores via Google Lighthouse with multiple tests being conducted.
-* index.html Lighthouse
-* instructions.html Lighthouse
-* tetris.html Lighthouse
-* scores.html Lighthouse
-For the most part pages consistently scored 0 for accessibility and SEO and 0 for performance and best practices.
+* index.html Lighthouse  [Index Lighthouse Score](assets/images/readme-imgs/index-html-lh.png)
+* instructions.html Lighthouse [Instructions Lighthouse Score](assets/images/readme-imgs/instructions-html-lh.png)
+* tetris.html Lighthouse [Tetris Lighthouse Score](assets/images/readme-imgs/tetris-html-lh.png)
+* scores.html Lighthouse [Scores Lighthouse Score](assets/images/readme-imgs/scores-html-lh.png)
+  * For the most part pages consistently scored 100 for accessibility and SEO and upper 90's for performance and best practices.
 ### AmIResponsive
-The site was tested with the amireponsive tool to determine how well it would look on various outputs. AmIReponsive
+The site was tested with the amireponsive tool to determine how well it would look on various outputs.
+ *  AmIReponsive
+   * ![amIResponsive](assets/images/readme-imgs/amIResponsive.jpg)
  <hr>
 <p>&nbsp</p>
 
@@ -183,7 +187,8 @@ The deployment process was done via GitHub Pages. From the Github Pages tab, I f
  * Ensured that the **main** branch was selected as the **source**  from which it was built.
  *  I then selected **save** at which point Github alerted me that the site was ready to be published at the provided address(linked above).
  * When clicking on the link, a new browser window was opened and the live site was made available.
-<!-- need to add more information to this area and explain the process in more detail -->
+    * [Github Deployment](assets/images/readme-imgs/github-deployment.png)
+
 
 <hr>
 <p>&nbsp</p>
