@@ -146,7 +146,7 @@
 /* create background image for the scores page */
 .scores-bg {
     background: url("../images/blueCube.jpg");
-    height: 100%;
+    height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
