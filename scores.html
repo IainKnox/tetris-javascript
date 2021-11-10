@@ -13,7 +13,7 @@
 </head>
 
 <body class="scores-bg">
-    <section class="nav">
+    
         <!-- navigation elements for User to access instruction, rules and scores-->
         <nav class="navbar">
             <div class="brand-logo">
@@ -35,14 +35,14 @@
                 </ul>
             </div>
         </nav>
-    </section>
+    
 
 
     <!--    scores section that record the players highest score locally -->
     <section class="scoring">
         <div class="high-scores-wrapper">
             <div class="high-scores">
-                <h1 id="finalScore"></h1>
+                <h1 id="finalScore" class="title">0</h1>
                 <form>
                     <input type="text" name="playerName" id="playerName" placeholder="Enter your name"/>
                     <button type="submit" class="btn" id="save-score" onclick="saveScore(event)">Save</button>
