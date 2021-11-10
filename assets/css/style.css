@@ -134,6 +134,24 @@
     background-size: cover;
 }
 
+/* create background image for the instructions page */
+.about-bg {
+    background: url("../images/pink-tetrimino.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* create background image for the scores page */
+.scores-bg {
+    background: url("../images/blueCube.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 /* universal styling for the headings across all pages */
 .title {
     font-family: "Rammetto One", sans-serif;
@@ -142,7 +160,7 @@
 }
 
 .title h1 {
-   
+
     font-size: 2.5rem;
     text-transform: uppercase;
     color: #1f0322;
@@ -170,6 +188,7 @@
     /*background-color: #03011e;*/
 
 }
+
 /* main panel for the game grid and start button*/
 .box {
     height: 460px;
@@ -179,6 +198,7 @@
     border-radius: 5px;
 
 }
+
 /* create smaller side panels for the buttons and game information*/
 .sidebox1 {
     height: 320px;
@@ -235,18 +255,18 @@
 
 /* div to arrange the control buttons */
 .controls {
-   text-align: center;
-   margin:  0 auto;
-   /* border:  1px dashed blue; */
+    text-align: center;
+    margin: 0 auto;
+    /* border:  1px dashed blue; */
 }
 
 /* styling for the control keys left, rotate, right and down */
 .control-btn {
-    max-width:  40ch;
+    max-width: 40ch;
     font-family: 'Assistant', sans-serif;
     font-size: 1.12rem;
     font-weight: bold;
-   
+
     display: inline-block;
     background-color: #03011e;
     border: 2px solid #847655;
@@ -255,7 +275,7 @@
     padding: .5rem;
     margin: .25rem 1rem;
     border-radius: 10px;
-  
+
     transition: all 200ms ease-in-out;
     text-decoration: none;
 }
@@ -325,6 +345,12 @@
 }
 
 /* Scores Page */
+
+.high-scores-wrapper {
+    margin: 0 auto;
+    padding: 2rem;
+}
+
 .high-scores {
     display: flex;
     text-align: center;
@@ -355,7 +381,7 @@ input {
 
     margin-bottom: 1rem;
     padding: 1.5rem;
-    
+
     border: none;
     box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
 }
@@ -382,7 +408,7 @@ footer p {
 
 }
 
-.social-networks > li {
+.social-networks>li {
     display: inline;
 }
 
@@ -396,7 +422,7 @@ footer p {
 
 /* an arrow fixed to scroll with the screen, so that a user can quickly return to the top of the page */
 .arrow-top {
-    position: fixed; 
+    position: fixed;
     right: .5rem;
     bottom: .25rem;
     font-family: 'Rammetto One', sans-serif;
