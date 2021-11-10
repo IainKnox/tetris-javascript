@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(nextBlox); //check that the display grid is correct
  
     //create the first position of the tetrimino in the display grid so the player can see whats up next
-    const nextTetrimino = [
+    const nextTetrimino = [ 
         [2, 1, nextWidth + 1, nextWidth * 2 + 1], //pTetrimino
         [0, 1, nextWidth + 1, nextWidth * 2 + 1], //qTetrimino
         [nextWidth * 2, nextWidth * 2 + 1, nextWidth + 1, nextWidth + 2], //sTetrimino
@@ -290,26 +290,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     //create a high score function to store the players highest scores locally
-    const highestScoreResults = document.getElementsByClassName('highest-score');
 
-    let highestScore = window.localStorage.getItem('highScore');
-    // let playerScore = 0;
-    // let gameLine = 0;
-    // let playerLevel = 0;
 
-    function updateScores() {
-        playerCurrentScore.innerHTML = playerScore;
-        playerCurrentLevel.innerHTML = playerLevel;
-        highestScoreResults.innerHTML = highScore === null ? 0 : highScore;
-    }
+    
+    // const highestScoreResults = document.getElementsByClassName('highest-score');
 
-    //storing scores locally
-    function updateHighScores() {
-        if (playerScore > highScore) {
-            highScore = playerScore;
-        }
-    }
-    document.addEventListener(updateScores());
+    // let highestScore = window.localStorage.getItem('highScore');
+    // // let playerScore = 0;
+    // // let gameLine = 0;
+    // // let playerLevel = 0;
+
+    // function updateScores() {
+    //     playerCurrentScore.innerHTML = playerScore;
+    //     playerCurrentLevel.innerHTML = playerLevel;
+    //     highestScoreResults.innerHTML = highScore === null ? 0 : highScore;
+    // }
+
+    // //storing scores locally
+    // function updateHighScores() {
+    //     if (playerScore > highScore) {
+    //         highScore = playerScore;
+    //     }
+    // }
+    // document.addEventListener(updateScores());
 
     //create function to add score to game for clearing lines
     function addScore() {

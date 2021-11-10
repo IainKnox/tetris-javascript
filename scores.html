@@ -21,7 +21,7 @@
                     <h2>Tetris JS</h2>
                 </a>
             </div>
-            <a href=" javascript:void(0);" class="toggle-btn">
+            <a href="#" class="toggle-btn">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
@@ -36,21 +36,22 @@
             </div>
         </nav>
     </section>
-<!--    scores section that record the players highest scores locally -->
+
+
+    <!--    scores section that record the players highest scores locally -->
     <section class="scoring">
-        <div class="scores">
-            <div class="high-score">Highest Score:</div>
-            <span class="highest-score" id="highest-score"></span>
-            <br>
-            <br>
-            <div class="player-score">Player Score:</div>
-            <span class="current-score" id="player-current-score"></span>
-            <br>
-            <br>
-            <div class="player-level">Current Level:</div>
-            <span class="current-level" id="current-level"></span>
+        <div class="high-scores-wrapper">
+            <div class="high-scores">
+                <h1 class="final-score">0</h1>
+                <form action="">
+                    <input type="text" name="playerName" id="playerName" placeholder="Enter your name">
+                    <button type="submit" class="score btn" id="save-score" onclick="saveScore(event)">Save</button>
+                </form>
+                <a href="tetris.html" class="btn">Play Again</a>
+                <a href="index.html" class="btn">Home</a>
+            </div>
         </div>
-        
+
     </section>
 
     <!--footer section for social links, copyright information    -->

@@ -363,6 +363,13 @@
     background-color: violet;
 }
 
+/* Scores Page */
+.high-scores {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
 /* footer section */
 footer {
     height: 150px;
