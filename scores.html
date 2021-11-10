@@ -17,7 +17,7 @@
         <!-- navigation elements for User to access instruction, rules and scores-->
         <nav class="navbar">
             <div class="brand-logo">
-                <a href="index.html" aria-label="returns the user to the top of the home page">
+                <a href="#" aria-label="returns the user to the top of the home page">
                     <h2>Tetris JS</h2>
                 </a>
             </div>
@@ -43,9 +43,19 @@
         <div class="high-scores-wrapper">
             <div class="high-scores">
                 <h1 class="title">0</h1>
-                <form action="">
-                    <input type="text" name="playerName" id="playerName" placeholder="Enter your name">
-                    <button type="submit" class="btn" id="save-score" onclick="saveScore(event)">Save</button>
+                <form>
+                    <input 
+                    type="text" 
+                    name="playerName" 
+                    id="playerName" 
+                    placeholder="Enter your name"/>
+                    <button 
+                    type="submit" 
+                    class="btn" 
+                    id="save-score" 
+                    onclick="saveScore(event)" 
+                    disabled
+                    >Save</button>
                 </form>
                 <a href="tetris.html" class="btn">Play Again</a>
                 <a href="index.html" class="btn">Home</a>
@@ -79,7 +89,9 @@
         <p>Copyright <span>&copy;</span> 2021 | Privacy Policy | Terms & Conditions</p>
     </footer>
 
-    <script src="https://kit.fontawesome.com/0fb38816a1.js" crossorigin="anonymous"></script>
-    </footer>
+     <!--  scripts for js and fontawesome -->
+     <script src="assets/js/script.js"></script>
+     <script src="https://kit.fontawesome.com/0fb38816a1.js" crossorigin="anonymous"></script>
+ </body>
 
 </html>

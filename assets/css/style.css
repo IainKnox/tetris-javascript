@@ -32,13 +32,13 @@
     margin: 0;
     padding: .55rem;
     text-align: center;
-    color: #cea716;
+    color: #1f0322;
 }
 
 /* create an anchor on the brand logo that return the user back to home on click*/
 .brand-logo a {
     text-decoration: none;
-    color: #cea716;
+    color: #1f0322;
 }
 
 .navbar-links ul {
@@ -386,6 +386,7 @@ form {
 
 }
 
+/* input for the player to enter their name */
 input {
     font-size: 1rem;
     max-width: 20ch;

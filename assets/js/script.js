@@ -290,9 +290,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     //create a high score function to store the players highest scores locally
+   
+    const playerName = document.getElementById('playerName');
+    const saveScoreButton = document.querySelector('#save-score');
+
+    playerName.addEventListener('keyup', () => {
+             saveScoreButton.disabled = !playerName.value;
+
+    });
+
+    saveScore = event => {
+        event.preventDefault();
+    }
 
 
-    
+
     // const highestScoreResults = document.getElementsByClassName('highest-score');
 
     // let highestScore = window.localStorage.getItem('highScore');
