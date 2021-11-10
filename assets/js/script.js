@@ -316,8 +316,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 playerScore.innerHTML = score;
                 lines += 1; //add 1 to the player dashboard to show the player how many lines they've cleared
                 gameLine.innerHTML = lines; {
-                    if (lines % 5 === 0 && lines < 1001) { //increment the level for every 5 lines cleared
+                    if (lines % 2 === 0 && lines < 1001) { //increment the level for every 5 lines cleared
                         level += 1;
+                        score += 100; //add 100 bonus points for every level gained
+                        playerScore.innerHTML = score;
                         playerLevel.innerHTML = level;
                     }
                 }

@@ -1,22 +1,36 @@
-## Tetris Javascript
-In this project I have created a page to demonstrate my understanding of the concepts of *javascript* with a Tetris game. 
+# Tetris Javascript
+In this project I have created a game to demonstrate my understanding of the concepts of *javascript* with a Tetris game. Feeling confident in my use of HTML and CSS, I thought I would challenge myself and in retrospect, may have bitten off more than I could chew.
 
-I approached this project with mobile first design principles to create a responsive webpage that is intended to look good and and perform well on any size of device. I have also put good user experience at the front and center of all designs and have strived to create an intuitive, informative and enjoyable journey for my users.
+I approached this project with mobile first design principles to create a responsive webpage that is intended to look good and and perform well on any size of device. This in its own right created some challenges especially with regard to programming touch controls, which I have yet to master.
+ I have also put good user experience at the front and center of all designs and have strived to create an intuitive, informative and enjoyable journey for my users.
 
-User Stories
-I identified 2 groups of user for this site, firstly, users that are new to tetris and looking for fun and colourful experience. Secondly, experienced tetris players who are looking for a game that increases in difficulty over time testing their skill.
-New Users
-Should be able to quickly gain an overview of what the game is about via the landing page.
-Should be able to see how to play the game via the how to tetris page.
-Should be able to clearly understand the rules of the game via the rules page.
-Should be able to gain higher levels of experience as the game progresses.
-Should be able to get clear information of which tetriminos are dropping next through the preview grid.
-Should be able to identify which keys are pressed and interact with the controls on the page.
-Existing Users
-Should be able to do all the above.
-Should be able to gain an high score and post that to the high scores page.
-Should be able to experience a sense of nostalgia through classic tetris elements.
-From the above information I was able to determine what would be of considerable value when visiting the site and from that developed the following scope and goals:
+## User Stories
+I identified 2 groups of user for this site, 
+* Firstly, users that are new to tetris and looking for a fun, colourful entry level experience. 
+* Secondly, experienced tetris players who are looking for a game that increases in difficulty over time testing their skill.
+### New Users
+* Should be able to quickly gain an overview of what the game is about.
+* Should be able to play the game via the tetris page.
+* Should be able to clearly understand the rules of the game via the instructions page.
+* Should be able to gain higher levels of experience as the game progresses.
+* Should be able to get clear information of what tetriminos are and how they interact with the grid.
+* Should be able to identify which keys are pressed and interact with the controls on the page.
+### Existing Users
+* Should be able to do all the above.
+* Should be able to gain an high score that is stored locally within localStorage.
+* Should be able to experience a sense of nostalgia through classic tetris elements, such as the brightly coloured tetriminos and the music.
+* Should be able to further expand their knowledge of the game through the various links to community sites and knowledge bases.
+* Should be able to connect  with Tetris communities through the social media links provided on the site.
+<hr>
+
+  ## Scope & Site Goals
+  From the above information I was able to determine what would be of considerable value when visiting the site and from that developed the following scope and goals:
+
+  * Create a page that has a game interface, featuring a grid that tetriminos can move down, rotate on and stack on to form complete lines.
+  * Completed lines should be removed from the grid, and the users score should be incremented for every successful line cleared. Multiple clears should result in the user advancing in level.
+  information regarding the players score, lines cleared and level achieved should feedback to the player in real time.
+  * The player should be able to play the game with the use of arrow keys, or with a mouse by clicking on dedicated buttons.
+
 
 <!-- still to add -->
 
