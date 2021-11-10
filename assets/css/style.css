@@ -137,7 +137,7 @@
 /* create background image for the instructions page */
 .about-bg {
     background: url("../images/pink-tetrimino.jpg");
-    height: 100vh;
+    height: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -146,7 +146,7 @@
 /* create background image for the scores page */
 .scores-bg {
     background: url("../images/blueCube.jpg");
-    height: 100vh;
+    height: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -176,13 +176,33 @@
     box-shadow: 0px 2px 8px 0px red;
 }
 
+.title p {
+    font-family: "Assistant", sans-serif;
+    font-size: 1.25rem;
+    margin: 0 auto;
+    padding: .5rem;
+}
+.headings {
+    font-weight: bold;
+}
+.links  a {
+    font-family: "Assistant", sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    text-align: center;
+    justify-content: center;
+    display: block;
+}
+
 /*game page panels*/
 .panels {
     margin: 0 1rem;
     width: 95%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 12px;
     justify-content: center;
     align-items: center;
     /*background-color: #03011e;*/
