@@ -350,4 +350,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    //create a function that validates the user input in the name field of scores.html
+    // TODO
+    function validateForm() {
+        let x = document.getElementById('PlayerName').value;
+         if (x == "" ) {
+            alert(' You must enter a name!');
+            return false;
+         }
+         
+    }
+    validateForm();
+
 });
