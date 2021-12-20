@@ -346,7 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
             startButton.disabled = true; //disable the start button so that the game cannot continue
             localStorage.setItem("mostRecentScore", score);
             //redirect player to the scores page
-            return window.location.assign("/scores.html"); //player should be able to save score locally, navigate to other pages in the site
+            return window.location.assign("scores.html"); //player should be able to save score locally, navigate to other pages in the site
         }
     }
 
