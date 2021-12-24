@@ -285,16 +285,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const playerName = document.getElementById('playerName');
     const saveScoreBtn = document.getElementById('save-score');
     const finalScore = document.getElementById('finalScore');
-    const mostRecentScore = localStorage.getItem('mostRecentScore');
+    //const mostRecentScore = localStorage.getItem('mostRecentScore');
     const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-    finalScore.innerText = mostRecentScore;
+    //finalScore.innerHTML = mostRecentScore;
 
     playerName.addEventListener('keyup', () => {
         saveScoreBtn.disabled = !playerName.value; //save button should be disabled until the player inputs their name 
     });
 
-    saveScore = (e) => {
-        e.preventDefault();
+    saveScore = (event) => {
+        event.preventDefault();
 
         const score = {
             score: mostRecentScore,
@@ -354,13 +354,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //create a function that validates the user input in the name field of scores.html
     // TODO
-    scoreForm.addEventListener('submit', (e) => {
+    scoreForm.addEventListener('submit', (event) => {
         let messages = [ ];
         if (playerName.value === "" || playerName.value == null) {
             messages.push("You need to enter your name");
         }
         if (messages.length > 0) {
-            e.preventDefault();
+            event.preventDefault();
             errorForm.innerText = messages.join(', ');
         }
     });
