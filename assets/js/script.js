@@ -356,7 +356,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // TODO
     scoreForm.addEventListener('submit', (e) => {
         let messages = [ ];
-        if (playerName.value === " " || playerName.value == null) {
+        if (playerName.value === "" || playerName.value == null) {
             messages.push("You need to enter your name");
         }
         if (messages.length > 0) {
