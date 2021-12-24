@@ -43,9 +43,10 @@
         <div class="high-scores-wrapper">
             <div class="high-scores">
                 <h1 id="finalScore" class="title">0</h1>
-                <form>
-                    <input type="text" name="playerName" id="playerName" placeholder="Enter your name"/>
-                    <button type="submit" class="btn" id="save-score" onclick="saveScore(event)">Save</button>
+                <div id="error"></div>
+                <form action="scores.html" method="get" id="scoreForm">
+                    <input type="text" name="playerName" id="playerName" placeholder="Enter your name" required/>
+                    <button type="submit" class="btn">Save</button>
                 </form>
                 <a href="tetris.html" class="btn">Play Again</a>
                 <a href="index.html" class="btn">Home</a>

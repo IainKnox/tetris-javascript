@@ -43,7 +43,7 @@ I identified 2 groups of user for this site,
   * The player should be able to pause the game.
   * If all the tetriminos make it to the grid ceiling, the game should end.
   
-    * Rather than create traditional wireframes for this project, I opted for a pen and paper approach, as it made it easier to visualize and iterate through the various functions and deisgn elements.
+    * Rather than create traditional wireframes for this project, I opted for a pen and paper approach, as it made it easier to visualize and iterate through the various functions and design elements.
         * ![Initial Scoping Meeting](assets/images/readme-imgs/wireframe-artwork1.png)
         * ![Initial Scoping Meeting](assets/images/readme-imgs/wireframe-artwork2.png)
         * ![Initial Scoping Meeting](assets/images/readme-imgs/wireframe-artwork3.png)

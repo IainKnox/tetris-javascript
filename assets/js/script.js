@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const gameMusic = document.getElementById('music');
     const soundButton = document.getElementById('play');
     let nextRandom = 0;
+    const scoreForm = document.getElementById('scoreForm');
+    const errorForm = document.getElementById('error');
 
     const colours = [
         'MidnightBlue',
@@ -352,14 +354,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //create a function that validates the user input in the name field of scores.html
     // TODO
-    function validateForm() {
-        let x = document.getElementById('PlayerName').value;
-         if (x == "" ) {
-            alert(' You must enter a name!');
-            return false;
-         }
-         
-    }
-    validateForm();
+    scoreForm.addEventListener('submit', (e) => {
+        let messages = [ ];
+        if (playerName.value === " " || playerName.value == null) {
+            messages.push("You need to enter your name");
+        }
+        if (messages.length > 0) {
+            e.preventDefault();
+            errorForm.innerText = messages.join(', ');
+        }
+    });
 
 });
