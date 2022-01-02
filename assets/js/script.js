@@ -328,12 +328,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const playerName = document.getElementById('playerName');
     const saveScoreBtn = document.getElementById('save-score');
     const finalScore = document.getElementById('finalScore');
-    //const mostRecentScore = localStorage.getItem('mostRecentScore');
+    const mostRecentScore = localStorage.getItem('mostRecentScore');
     const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-    //finalScore.innerHTML = mostRecentScore;
+    finalScore.innerHTML = mostRecentScore;
     if (playerName) {
         playerName.addEventListener('keyup', () => {
-            saveScoreBtn.disabled = !playerName.value; //save button should be disabled until the player inputs their name 
+            if (playerName.value === "" || playerName.value == null) {
+                saveScoreBtn.disabled = !playerName.value; //save button should be disabled until the player inputs their name 
+            }
         });
     }
 
