@@ -333,9 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
     finalScore.innerHTML = mostRecentScore;
     if (playerName) {
         playerName.addEventListener('keyup', () => {
-            if (playerName.value === "" || playerName.value == null) {
-                saveScoreBtn.disabled = !playerName.value; //save button should be disabled until the player inputs their name 
-            }
+            saveScoreBtn.disabled = !playerName.value; //save button should be disabled until the player inputs their name 
         });
     }
 
