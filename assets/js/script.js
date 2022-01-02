@@ -31,23 +31,30 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     // create a function that toggles the hamburger navigation menu
-    toggle.addEventListener('click', () => {
-        navbar.classList.toggle('active');
-    });
+    // add check to see if toggle element exists 
+    if (toggle) {
+        toggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+    }
+    
 
     // create a function that toggles the music on or off using a button click
-    soundButton.addEventListener('click', () => {
-        if (gameMusic.muted == false) {
-            gameMusic.muted = true;
-            soundButton.innerHTML = 'Music Paused';
-        } else {
-            gameMusic.muted = false;
-            gameMusic.play();
-            gameMusic.volume = 0.3;
-            gameMusic.loop = true;
-            soundButton.innerHTML = 'Music Playing';
-        }
-    });
+    // add check to see if soundButton element exists
+    if (soundButton) {
+        soundButton.addEventListener('click', () => {
+            if (gameMusic.muted == false) {
+                gameMusic.muted = true;
+                soundButton.innerHTML = 'Music Paused';
+            } else {
+                gameMusic.muted = false;
+                gameMusic.play();
+                gameMusic.volume = 0.3;
+                gameMusic.loop = true;
+                soundButton.innerHTML = 'Music Playing';
+            }
+        });
+    }
 
     /**
      * Create the arrays for each of the 7 Tetrimino shapes
@@ -135,18 +142,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // start button acts as start/pause game button
-    startButton.addEventListener('click', () => {
-        if (timerId) {
-            clearInterval(timerId);
-            timerId = null;
-            startButton.innerHTML = 'Game Paused'; //change text to show gameplay is paused
-        } else {
-            draw();
-            timerId = setInterval(moveDown, 1000);
-            startButton.innerHTML = 'Started'; //change text to show gameplay is running
-            nextRandom = Math.floor(Math.random() * theTetriminos.length);
-        }
-    });
+    // add check to see if startButton exists
+    if (startButton) {
+        startButton.addEventListener('click', () => {
+            if (timerId) {
+                clearInterval(timerId);
+                timerId = null;
+                startButton.innerHTML = 'Game Paused'; //change text to show gameplay is paused
+            } else {
+                draw();
+                timerId = setInterval(moveDown, 1000);
+                startButton.innerHTML = 'Started'; //change text to show gameplay is running
+                nextRandom = Math.floor(Math.random() * theTetriminos.length);
+            }
+        });
+    }
 
     //create a function to move the tetriminos down the grid
     function moveDown() {
@@ -206,21 +216,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const rotateButton = document.getElementById('rotate');
     const rightButton = document.getElementById('right');
     const downButton = document.getElementById('down');
-
-
-    leftButton.addEventListener('click', () => {
-        moveLeft();
-    });
-    rotateButton.addEventListener('click', () => {
-        turnShape();
-    });
-    rightButton.addEventListener('click', () => {
-        moveRight();
-    });
-    downButton.addEventListener('click', () => {
-        moveDown();
-    });
-
+    
+    //add checks to so if leftButton, rotateButton, rightButton and downButton exist
+    if (leftButton) {
+        leftButton.addEventListener('click', () => {
+            moveLeft();
+        });
+    }
+    if (rotateButton) {
+        rotateButton.addEventListener('click', () => {
+            turnShape();
+        });
+    }
+    if (rightButton) {
+        rightButton.addEventListener('click', () => {
+            moveRight();
+        });
+    }
+    if (downButton) {
+        downButton.addEventListener('click', () => {
+            moveDown();
+        });
+    }
     //create a function to move the tetrimino to the right until it reaches the edge of the grid
     function moveRight() {
         undraw();
@@ -288,10 +305,11 @@ document.addEventListener('DOMContentLoaded', () => {
     //const mostRecentScore = localStorage.getItem('mostRecentScore');
     const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
     //finalScore.innerHTML = mostRecentScore;
-
-    playerName.addEventListener('keyup', () => {
-        saveScoreBtn.disabled = !playerName.value; //save button should be disabled until the player inputs their name 
-    });
+    if (playerName) {
+        playerName.addEventListener('keyup', () => {
+            saveScoreBtn.disabled = !playerName.value; //save button should be disabled until the player inputs their name 
+        });
+    }
 
     saveScore = (event) => {
         event.preventDefault();
@@ -353,16 +371,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     //create a function that validates the user input in the name field of scores.html
+    // add check to see if scoreForm element exists
     // TODO
-    scoreForm.addEventListener('submit', (event) => {
-        let messages = [ ];
-        if (playerName.value === "" || playerName.value == null) {
-            messages.push("You need to enter your name");
-        }
-        if (messages.length > 0) {
-            event.preventDefault();
-            errorForm.innerText = messages.join(', ');
-        }
-    });
+    if (scoreForm) {
+        scoreForm.addEventListener('submit', (event) => {
+            let messages = [ ];
+            if (playerName.value === "" || playerName.value == null) {
+                messages.push("You need to enter your name");
+            }
+            if (messages.length > 0) {
+                event.preventDefault();
+                errorForm.innerText = messages.join(', ');
+            }
+        });
+    }
 
 });
