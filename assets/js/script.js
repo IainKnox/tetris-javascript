@@ -249,6 +249,31 @@ document.addEventListener('DOMContentLoaded', () => {
         draw();
     }
 
+    //fix issue with tetriminos breaching the sides when turning at the left or right edge
+    function rightEdge() {
+        return current.some(index => (currentPosition + index + 1) % width === 0);
+    }
+
+    function leftEdge() {
+        return current.some(index => (currentPosition + index) % width === 0);
+    }
+
+    function checkEdge(P) {
+        P = P || currentPosition;        // get the current position
+        if ((P+1) % width < 4) {        // add 1 to the tetrimino position as it is indexed at 0 and it may the current position may be 1 less
+            if (rightEdge()) {              // check to see if the tetrimino is turned through the right edge
+                currentPosition +=1;    // add 1 to ensure it is flipped back preventing it passing through
+                checkEdge(P);
+            }
+        }
+        else if (P % width > 5) {
+            if (leftEdge()) {
+                currentPosition -=1;
+                checkEdge(P);
+            }
+        }
+    }
+
     //create a function to turn the tetrimino around by a 90 degree rotation
     function turnShape() {
         undraw(); //undraw the current tetrimino 
@@ -257,6 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentRotation = 0; //set new rotation 
         }
         current = theTetriminos[random][currentRotation];
+        checkEdge(); //check to see if the tetrimino has been passed through the edge of the board
         draw(); //draw the new rotation 
     }
 
