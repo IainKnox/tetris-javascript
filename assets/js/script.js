@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const finalScore = document.getElementById('finalScore');
     const mostRecentScore = localStorage.getItem('mostRecentScore');
     const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-    finalScore.innerHTML = mostRecentScore;
+   
     if (playerName) {
         playerName.addEventListener('keyup', () => {
             saveScoreBtn.disabled = !playerName.value; //save button should be disabled until the player inputs their name 
@@ -390,6 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
             startButton.style.backgroundColor = 'red';
             startButton.style.color = 'white';
             startButton.disabled = true; //disable the start button so that the game cannot continue
+            finalScore.innerHTML = mostRecentScore;
             localStorage.setItem("mostRecentScore", score);
             //redirect player to the scores page
             return window.location.assign("scores.html"); //player should be able to save score locally, navigate to other pages in the site
