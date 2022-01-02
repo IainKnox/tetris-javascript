@@ -153,6 +153,30 @@ The various tests that were run were:
 * checking to see if my media queries behaved as expected with regards to navigation toggle displaying in rows when in mobile navigation.
 * I then tested it on different browsers. I have tested in Chrome, Firefox and Edge. Once I was sure my project worked on windows 10, I then opened it on my phone running Safari on IOS 15.
 <hr>
+
+### ***Bugs and Fixes:***
+
+1. **Console Errors** - Due to a rather tight development schedule, I never considered checking for console errors with the developer tools prior to submission. As there was no time to have had it checked in the peer code review, it wasn't until I had received assessment feedback that I looked into the reason for the errors.
+    * ***Issue Found:***
+        * The site spanned multiple pages, and not all elements are present on each page, for example, the soundButton element is only present on the game page.
+        * Due to a lack of checks, when a page loaded, the script would attempt to  run through the various events and if the event  was not present, it would throw an uncaught error.
+    * ***Causes:***
+        * I used event listeners to capture the user interactions on the page, ie keypresses or clicks. I didn't occur to me that the lack of an event on a page would cause a major error, as the program still functioned as intended. 
+    * ***Solution Found:***
+        * I figured out that the errors were being caused due to missing buttons, keypresses and as I commented out each event, the program would then move on the the next missing event and throw an error. Once I understood how the script was interacting with the DOM, I understood that I needed to introduce some for of check.
+        * I posted the following into the JS slack channel to check my hypothesis: 
+        >morning all, wonder if any can offer me some insight on this issue i'm having. I'm picking up console errors on various pages due to the event listeners, ie, my index page throws an error, "cannot read properties of undefined (reading 'addEventListener') " But its for an event that shouldn't affect his page. This happens for similar instances across other pages? Do I need to define a function that firstly checks whether the elements are present on the page before adding the event, or can I add listener options to make it passive when not required? Does any of that make sense?
+
+       * Having verbalized my issue, I was advised to check if what I was trying to grab existed. I added an if statement to test the existence of each element before being called. This fixed the issue and removed all the errors.
+
+1. **Form Validation** - Players could bypass the need to enter a name when taken the score page.
+    * ***Issue Found:***
+        * I had thought that I had built validation into the form, so that a player would have to enter a name before being able to submit a score. Players could bypass this and submit a score without the need to enter a name.
+    * ***Causes:***
+        * A lack of validation of the input meant that the program would continue irrespective of input or not.
+    * ***Solution Found:***
+        * The simplest solution was to make the input a requirement by adding the 'required' field. Now trying to submit would result in an alert being thrown to the user, requesting the user to input their name. 
+
 <p>&nbsp</p>
 
 ### Testing 2.0
