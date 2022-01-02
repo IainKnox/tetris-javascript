@@ -390,7 +390,6 @@ document.addEventListener('DOMContentLoaded', () => {
             startButton.style.backgroundColor = 'red';
             startButton.style.color = 'white';
             startButton.disabled = true; //disable the start button so that the game cannot continue
-            finalScore.innerHTML = mostRecentScore;
             localStorage.setItem("mostRecentScore", score);
             //redirect player to the scores page
             return window.location.assign("scores.html"); //player should be able to save score locally, navigate to other pages in the site
