@@ -177,6 +177,14 @@ The various tests that were run were:
     * ***Solution Found:***
         * The simplest solution was to make the input a requirement by adding the 'required' field. Now trying to submit would result in an alert being thrown to the user, requesting the user to input their name. 
 
+1. **Keyboard Input** - Players are unable to input any text due to keystrokes being disabled on the score page.
+    * ***Issue Found:***
+        * When on the scores page, players are unable to input anything into the "Enter Your Name" field.
+    * ***Causes:***
+        * I believe the cause is due to the prevent default parameter being passed to the keydown function on tetris.html. I tried focusing on on the event listener by firstly attempting to get this function to fire solely on *window.location.href === 'tetris.html'*, which while this solved the issue on other pages, it prevent the keyboard input working for the game. I than attempted to target the gameArea section, but this caused the same issue. While I know the solution to this problem, is to focus the event solely to the game page, I have been unable to code a viable answer as yet and fear I'm spending too much time chasing my tail at this point.
+    * ***Solution Found:***
+        * The simplest solution at this point was to remove the js script tag from the scores.html page and code the validation directly into the form. While this is more of a hack than a solution, I need to keep progressing with my course work and will revisit this in the future, when I am better equipped.
+
 <p>&nbsp</p>
 
 ### Testing 2.0
